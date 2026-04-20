@@ -1,0 +1,250 @@
+СПЕЦИФИКАЦИЯ УПРОЩЁННОГО XML (формат, который ты возвращаешь)
+vs. полная структура Cisco Packet Tracer 6.2 XML (её строит программа).
+
+===============================================================================
+A. УПРОЩЁННЫЙ XML — ТО, ЧТО ТЫ ГЕНЕРИРУЕШЬ
+===============================================================================
+
+Корень: <network>
+  Дети:
+    <devices>  — один или несколько <device>
+    <links>    — ноль или несколько <link>
+
+-------------------------------------------------------------------------------
+A.1 <device>
+-------------------------------------------------------------------------------
+Атрибуты:
+  name    (обязательно, строка, уникально в пределах сети)
+  type    (обязательно): router | switch | pc | laptop | server |
+                         access_point | hub | cloud | printer | ip_phone
+  model   (обязательно): строка модели из справочника (раздел B)
+  x, y    (по желанию, число): координаты логической схемы.
+          По умолчанию программа раскладывает устройства сеткой 200×150
+          от (100, 100) по 6 в ряд.
+
+Вложенные элементы:
+  <interface> ... </interface>           — 0..N штук
+  <vlans> <vlan .../> ... </vlans>       — 0..1 блок (имеет смысл для switch)
+  <config> <line>…</line> ... </config>  — 0..1 блок running-config
+
+-------------------------------------------------------------------------------
+A.2 <interface>
+-------------------------------------------------------------------------------
+Атрибуты:
+  name       (обязательно): имя порта как в IOS
+                            FastEthernet0/0, GigabitEthernet0/0,
+                            Serial0/0/0, Ethernet0/1/0, FastEthernet0 (PC).
+  ip         (строка IPv4, опционально)
+  subnet     (строка, например 255.255.255.0)
+  gateway    (IPv4, только для pc/laptop/server — default gateway)
+  clockrate  (число в bps — только для Serial DCE; обычно 2000000 или 64000)
+  bandwidth  (число в кбит/с — опционально)
+  mac        (XXXX.XXXX.XXXX — опционально, иначе сгенерируется)
+  duplex     (full | half | auto — опционально)
+
+-------------------------------------------------------------------------------
+A.3 <vlans> / <vlan>
+-------------------------------------------------------------------------------
+Атрибуты <vlan>:
+  number  (обязательно): число 1..4094
+  name    (по желанию): имя VLAN
+
+-------------------------------------------------------------------------------
+A.4 <config> / <line>
+-------------------------------------------------------------------------------
+Содержимое — многострочный running-config IOS. Каждая строка вкладывается в
+<line>...</line>. Команды один в один как в Cisco CLI. Программа перенесёт
+их в <RUNNINGCONFIG>/<LINE> внутри ENGINE устройства.
+
+-------------------------------------------------------------------------------
+A.5 <link>
+-------------------------------------------------------------------------------
+Атрибуты:
+  from       (обязательно): имя устройства (должно совпадать с <device name=>)
+  from_port  (обязательно): имя интерфейса на стороне from
+  to         (обязательно): имя устройства
+  to_port    (обязательно): имя интерфейса на стороне to
+  type       (по желанию): copper | fiber | serial | crossover
+             По умолчанию copper. crossover — это медный кабель
+             кросс-овер (нужен, например, между двумя одинаковыми
+             устройствами без свитча посередине).
+
+===============================================================================
+B. ПОЛНАЯ СТРУКТУРА CISCO PACKET TRACER XML (ТОЛЬКО ДЛЯ СПРАВКИ)
+===============================================================================
+
+Эту структуру строит программа AIcpt. Тебе она нужна только как контекст —
+ЧТОБЫ ПОНИМАТЬ КАКИЕ ПОЛЯ ТЫ МОЖЕШЬ ВЛИЯТЬ, А КАКИЕ ПРОГРАММА ПРИДУМАЕТ САМА.
+
+Корень XML: <PACKETTRACER5>. Обязательная версия: 6.2.0.0052.
+
+Секции:
+  <VERSION>              — константа "6.2.0.0052"
+  <PIXMAPBANK/>          — пусто
+  <NETWORK>              — ЗДЕСЬ лежат твои устройства и связи
+    <DEVICES>            — список <DEVICE>
+    <LINKS>              — список <LINK>
+    <SHAPETESTS/>
+    <DESCRIPTION translate="true"/>
+  <SCENARIOSET>          — "Scenario 0", programm подставит
+  <OPTIONS>              — огромный блок настроек UI: бэкграунды, шрифты,
+                           цвета, сертификаты, скрипт-модули. НЕ ТРОГАЙ.
+  <PHYSICALWORKSPACE>    — иерархия Intercity / Home City / Corporate Office /
+                           Main Wiring Closet. Берётся из white.xml как есть.
+  <FILTERS>              — набор протоколов (ICMP, OSPF, BGP, ...). Как есть.
+  <CLUSTERS>             — RootCluster. Как есть.
+  <LINES/>, <RECTANGLES/>, <ELLIPSES/>, <POLYGONS/>   — пусто
+  <USER_PROFILE>         — Guest
+  <MULTIUSER>            — пусто
+  <GEOVIEW_GRAPHICSITEMS/>
+  <SCRIPT_MODULE>        — как есть
+  <CEPS/>
+
+-------------------------------------------------------------------------------
+B.1 <DEVICE> — полная структура
+-------------------------------------------------------------------------------
+<DEVICE>
+  <ENGINE>
+    <TYPE customModel="" model="<MODEL>">Router|Switch|Pc|...</TYPE>
+    <NAME translate="true"><hostname>\n</NAME>   # '\n' в конце — артефакт PT
+    <POWER>true</POWER>
+    <DESCRIPTION/>
+    <MODULE>
+      <TYPE>eNonRemovableModule</TYPE>
+      <MODEL/>
+      <SLOT>
+        <TYPE>eNonRemovableModule|eInterfaceCard|ePtHostModule|…</TYPE>
+        <MODULE>
+          <TYPE>…</TYPE>
+          <MODEL>HWIC-4ESW | PT-HOST-NM-1CFE | …</MODEL>
+          <PORT>
+            <TYPE>eCopperFastEthernet|eGigabitEthernet|eSerial|…</TYPE>
+            <POWER>true</POWER>
+            <PINS>true</PINS>
+            <BANDWIDTH>100000</BANDWIDTH>
+            <FULLDUPLEX>false</FULLDUPLEX>
+            <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+            <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+            <MACADDRESS>00E0.F94D.2501</MACADDRESS>
+            <BIA>00E0.F94D.2501</BIA>
+            <CLOCKRATE>2000000</CLOCKRATE>
+            <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+            <DESCRIPTION/>
+            <CHANNEL>0</CHANNEL>
+            <IP>10.0.0.1</IP>            # <-- адрес настраивается здесь
+            <SUBNET>255.255.255.0</SUBNET>
+            <IPV6_LINK_LOCAL>FE80::...</IPV6_LINK_LOCAL>
+          </PORT>
+          ... ещё порты ...
+        </MODULE>
+      </SLOT>
+      ... ещё слоты ...
+    </MODULE>
+
+    <!-- Роутеры/свитчи дополнительно: -->
+    <RUNNINGCONFIG>
+      <LINE>version 12.4</LINE>
+      <LINE>hostname R1</LINE>
+      ...
+    </RUNNINGCONFIG>
+    <STARTUPCONFIG>...</STARTUPCONFIG>
+
+    <!-- Только для switch: -->
+    <VLANS>
+      <VLAN number="1" name="default"/>
+    </VLANS>
+    <VTP>
+      <DOMAIN_NAME/>
+      <MODE>0</MODE>
+      <VERSION>1</VERSION>
+    </VTP>
+    <SECURITY>...</SECURITY>
+
+    <!-- Только для PC / end-device: -->
+    <GATEWAY>10.0.0.1</GATEWAY>
+    <DNS_CLIENT><SERVER_IP/></DNS_CLIENT>
+
+    <SYS_NAME>Router1</SYS_NAME>
+    <SERIALNUMBER>FTX1111H5ZS</SERIALNUMBER>
+    <CUSTOM_VARS/>
+  </ENGINE>
+
+  <WORKSPACE>
+    <LOGICAL>
+      <X>200.0</X>
+      <Y>200.0</Y>
+      <DEVCLUSTERID>1-1</DEVCLUSTERID>
+      <CUSTOM_IMAGE_PHYSICAL/>
+    </LOGICAL>
+    <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,<name></PHYSICAL>
+  </WORKSPACE>
+</DEVICE>
+
+-------------------------------------------------------------------------------
+B.2 <LINK> — полная структура
+-------------------------------------------------------------------------------
+<LINK>
+  <TYPE>eCopper | eFiber | eSerial</TYPE>
+  <CABLE>
+    <LENGTH>1.5</LENGTH>
+    <FROM>0</FROM>                   <!-- индекс устройства в <DEVICES> -->
+    <PORT>FastEthernet0/0</PORT>     <!-- имя порта на стороне FROM -->
+    <TO>1</TO>                       <!-- индекс устройства -->
+    <PORT>FastEthernet0/1</PORT>     <!-- имя порта на стороне TO -->
+    <GEO_VIEW_COLOR>#000000</GEO_VIEW_COLOR>
+    <TYPE>eStraightThrough | eCrossOver</TYPE>
+  </CABLE>
+</LINK>
+
+ВАЖНО про LINK:
+  • FROM/TO — это НОМЕР устройства в порядке перечисления в <DEVICES>
+    (0-based). Программа AIcpt сама вычисляет эти номера по именам.
+  • Для Serial-линков <TYPE> = eSerial, вложенный <CABLE><TYPE> опускается
+    либо = eStraightThrough.
+
+===============================================================================
+C. ЧТО ОБЯЗАТЕЛЬНО / ОПЦИОНАЛЬНО
+===============================================================================
+
+ОБЯЗАТЕЛЬНЫЕ поля в <DEVICE> (иначе PT не откроет файл):
+  ENGINE/TYPE[@model], ENGINE/NAME, ENGINE/POWER, ENGINE/MODULE (хотя бы
+  каркас), WORKSPACE/LOGICAL/X, WORKSPACE/LOGICAL/Y.
+
+ОБЯЗАТЕЛЬНЫЕ поля в <LINK>:
+  LINK/TYPE, CABLE/FROM, CABLE/PORT (первый — от FROM), CABLE/TO,
+  CABLE/PORT (второй — от TO).
+
+ОПЦИОНАЛЬНЫЕ поля (программа подставит значения по умолчанию либо опустит):
+  DESCRIPTION, IPV6_*, MEM_ADDR, DEV_ADDR, SERIALNUMBER, BIA, CHANNEL,
+  CLOCKRATEFLAG, все SECURITY-поля для свитча.
+
+ОСОБЕННОСТИ:
+  • После <NAME translate="true">...</NAME> в оригинале PT ставит '\n'
+    в конце содержимого — программа повторяет это поведение сама.
+  • MEM_ADDR / DEV_ADDR — это значения указателей в памяти PT на момент
+    сохранения. При первой загрузке в PT они обновятся. Можно не задавать.
+  • VERSION всегда "6.2.0.0052". Другие версии сохранения отличаются
+    набором полей и могут не открыться.
+
+===============================================================================
+D. ЖИЗНЕННЫЙ ЦИКЛ ДАННЫХ
+===============================================================================
+
+  [описание сети .txt/.pdf/.docx]
+          │
+          ▼
+  prompt_builder.py  ─ склеивает текст + pre_prompt + spec + devices
+          │
+          ▼
+  prompt_for_ai.txt   →  пользователь → Claude/ChatGPT
+                                            │
+                         simplified.xml    ◄┘
+          │
+          ▼
+  xml_builder.py      ─ merge(white.xml, simplified.xml)
+          │
+          ▼
+  realTopolog.xml    (валидный Cisco PT XML)
+          │
+          ▼
+  repacket (Twofish/EAX)  →  network.pkt

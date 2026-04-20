@@ -1,0 +1,289 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Linksys-WRT300N">WirelessRouter</TYPE>
+          <NAME translate="true">Wireless Router0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>eNonRemovableModule</TYPE>
+              <MODULE>
+                <TYPE>eNonRemovableModule</TYPE>
+                <MODEL />
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0060.4736.0101</MACADDRESS>
+                  <BIA>0060.4736.0101</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>false</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL />
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::260:47FF:FE36:101</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0060.4736.0102</MACADDRESS>
+                  <BIA>0060.4736.0102</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0060.4736.0103</MACADDRESS>
+                  <BIA>0060.4736.0103</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0060.4736.0104</MACADDRESS>
+                  <BIA>0060.4736.0104</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0060.4736.0105</MACADDRESS>
+                  <BIA>0060.4736.0105</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eAccessPointWirelessN</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>11000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0060.4736.0106</MACADDRESS>
+                  <BIA>0060.4736.0106</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>6</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1935.62</X_COORD>
+            <Y_COORD>1928.13</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER />
+          <SYS_NAME />
+          <RUNNINGCONFIG />
+          <STARTUPCONFIG />
+          <BUILD_IN_ADDR>0090.210C.7CB4</BUILD_IN_ADDR>
+          <SECURITY>
+            <KEY_NAME />
+            <TEMP_KEY_NAME />
+            <RSA_KEY />
+            <TEMP_RSA_KEY />
+            <TIME_DATE />
+            <ENABLED>0</ENABLED>
+            <MODULUS_BITS>0</MODULUS_BITS>
+          </SECURITY>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <VLANS>
+            <VLAN number="1" name="default" />
+            <VLAN number="1002" name="fddi-default" />
+            <VLAN number="1003" name="token-ring-default" />
+            <VLAN number="1004" name="fddinet-default" />
+            <VLAN number="1005" name="trnet-default" />
+          </VLANS>
+          <VTP>
+            <DOMAIN_NAME />
+            <MODE>0</MODE>
+            <VERSION>1</VERSION>
+            <PASSWORD />
+            <CONFIG_REVISION>0</CONFIG_REVISION>
+            <UPDATER_IP>0.0.0.0</UPDATER_IP>
+            <UPDATE_TIMESTAMP>0-0-00 00:00:00</UPDATE_TIMESTAMP>
+          </VTP>
+          <SIG_IPSPROCESS>
+            <SIGNATURE>
+              <SIG_ID>2004</SIG_ID>
+              <SUB_ID>0</SUB_ID>
+              <RETIRED>0</RETIRED>
+              <ENABLED>0</ENABLED>
+              <EVENT_ACTION>0</EVENT_ACTION>
+            </SIGNATURE>
+          </SIG_IPSPROCESS>
+          <WIRELESS_SERVER>
+            <WIRELESS_COMMON>
+              <NETWORK_MODE>7</NETWORK_MODE>
+              <SSID>Default</SSID>
+              <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+              <AUTHEN_TYPE>0</AUTHEN_TYPE>
+              <RADIO_BAND>0</RADIO_BAND>
+              <WIDE_CHANNEL>0</WIDE_CHANNEL>
+              <STANDARD_CHANNEL>0</STANDARD_CHANNEL>
+            </WIRELESS_COMMON>
+            <SSID_BROADCAST_ENABLED>1</SSID_BROADCAST_ENABLED>
+            <MAC_FILTER_ENABLED>0</MAC_FILTER_ENABLED>
+            <ALLOW_ACCESS>0</ALLOW_ACCESS>
+          </WIRELESS_SERVER>
+          <FIRMWARE_VERSION>v0.93.3</FIRMWARE_VERSION>
+          <INTERNET_CONNECTION_TYPE>0</INTERNET_CONNECTION_TYPE>
+          <DEFAULT_GATEWAY>0.0.0.0</DEFAULT_GATEWAY>
+          <START_IP />
+          <MAX_USERS />
+          <LAN_IP_ADDRESS>192.168.0.1</LAN_IP_ADDRESS>
+          <LAN_SUBNET_MASK>255.255.255.0</LAN_SUBNET_MASK>
+          <INTERNET_IP_ADDRESS>0.0.0.0</INTERNET_IP_ADDRESS>
+          <INTERNET_SUBNET_MASK>0.0.0.0</INTERNET_SUBNET_MASK>
+          <REMOTE_MANAGEMENT>0</REMOTE_MANAGEMENT>
+          <DHCP_SERVER>
+            <ENABLED>1</ENABLED>
+            <POOLS>
+              <POOL>
+                <NAME>linksysPool</NAME>
+                <NETWORK>192.168.0.0</NETWORK>
+                <MASK>255.255.255.0</MASK>
+                <DEFAULT_ROUTER>192.168.0.1</DEFAULT_ROUTER>
+                <TFTP_ADDRESS>0.0.0.0</TFTP_ADDRESS>
+                <START_IP>192.168.0.100</START_IP>
+                <END_IP>192.168.0.149</END_IP>
+                <DNS_SERVER>0.0.0.0</DNS_SERVER>
+                <MAX_USERS>50</MAX_USERS>
+                <DOMAIN_NAME />
+                <DHCP_POOL_LEASES>
+                  <DHCP_POOL_LEASE>
+                    <IP_ADDRESS>192.168.0.100</IP_ADDRESS>
+                    <MAC_ADDRESS>0090.0C57.405E</MAC_ADDRESS>
+                    <HOST_PORT>Vlan1</HOST_PORT>
+                    <LEASE_TIME>86400000</LEASE_TIME>
+                    <CLIENT_ID>0090.0C57.405E</CLIENT_ID>
+                  </DHCP_POOL_LEASE>
+                  <DHCP_POOL_LEASE>
+                    <IP_ADDRESS>192.168.0.101</IP_ADDRESS>
+                    <MAC_ADDRESS>0000.0C09.C325</MAC_ADDRESS>
+                    <HOST_PORT>Vlan1</HOST_PORT>
+                    <LEASE_TIME>86400000</LEASE_TIME>
+                    <CLIENT_ID>0000.0C09.C325</CLIENT_ID>
+                  </DHCP_POOL_LEASE>
+                  <DHCP_POOL_LEASE>
+                    <IP_ADDRESS>192.168.0.102</IP_ADDRESS>
+                    <MAC_ADDRESS>0001.4313.91C7</MAC_ADDRESS>
+                    <HOST_PORT>Vlan1</HOST_PORT>
+                    <LEASE_TIME>86400000</LEASE_TIME>
+                    <CLIENT_ID>0001.4313.91C7</CLIENT_ID>
+                  </DHCP_POOL_LEASE>
+                  <DHCP_POOL_LEASE>
+                    <IP_ADDRESS>192.168.0.103</IP_ADDRESS>
+                    <MAC_ADDRESS>0060.2F69.564B</MAC_ADDRESS>
+                    <HOST_PORT>Vlan1</HOST_PORT>
+                    <LEASE_TIME>86400000</LEASE_TIME>
+                    <CLIENT_ID>0060.2F69.564B</CLIENT_ID>
+                  </DHCP_POOL_LEASE>
+                </DHCP_POOL_LEASES>
+              </POOL>
+            </POOLS>
+            <DHCP_RESERVATIONS />
+            <AUTOCONFIG />
+          </DHCP_SERVER>
+          <PPPOE_CLIENT>
+            <USERNAME />
+            <PASSWORD />
+            <SERVICE_NAME />
+            <CONNECTION_STATUS>3</CONNECTION_STATUS>
+          </PPPOE_CLIENT>
+          <DNS_CLIENT>
+            <SERVER_IP />
+            <SERVER_IPV6 />
+          </DNS_CLIENT>
+          <HTTP_SERVER>
+            <ENABLED>1</ENABLED>
+            <USERNAME>admin</USERNAME>
+            <PASSWORD>admin</PASSWORD>
+          </HTTP_SERVER>
+          <SINGLE_PORT_FORWARDING />
+          <ACCESS_POLICIES />
+          <DMZ_SETTINGS>
+            <STATUS>false</STATUS>
+            <DESTINATION_IP_ADDR>0.0.0.0</DESTINATION_IP_ADDR>
+          </DMZ_SETTINGS>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>494.5</X>
+            <Y>424</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195409792</MEM_ADDR>
+            <DEV_ADDR>200235432</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Wireless Router0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

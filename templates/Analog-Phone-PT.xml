@@ -1,0 +1,56 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Analog-Phone-PT">AnalogPhone</TYPE>
+          <NAME translate="true">Analog Phone0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>eNonRemovableModule</TYPE>
+              <MODULE>
+                <TYPE>eNonRemovableModule</TYPE>
+                <MODEL />
+                <PORT>
+                  <TYPE>eModem</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>56</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0090.0CBD.9D82</MACADDRESS>
+                  <BIA>0090.0CBD.9D82</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>2005.54</X_COORD>
+            <Y_COORD>1928.13</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810SNWQ</SERIALNUMBER>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>690.5</X>
+            <Y>579</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>200011640</MEM_ADDR>
+            <DEV_ADDR>282245072</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Analog Phone0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

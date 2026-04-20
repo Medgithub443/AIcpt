@@ -1,0 +1,144 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Cell-Tower">CellTower</TYPE>
+          <NAME translate="true">Cell Tower0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtCellTowerModule</TYPE>
+              <MODULE>
+                <TYPE>ePtCellTowerModule</TYPE>
+                <MODEL>PT-CELL-NM-1CX</MODEL>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>000B.BE84.82BA</MACADDRESS>
+                  <BIA>000B.BE84.82BA</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>false</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL />
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::20B:BEFF:FE84:82BA</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>eNonRemovableModule</TYPE>
+              <MODULE>
+                <TYPE>eNonRemovableModule</TYPE>
+                <MODEL />
+                <PORT>
+                  <TYPE />
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>0</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0000.0C27.91D7</MACADDRESS>
+                  <BIA>0000.0C27.91D7</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1856.29</X_COORD>
+            <Y_COORD>1856.29</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810RUTA</SERIALNUMBER>
+          <WIRELESS_CLIENT>
+            <WIRELESS_COMMON>
+              <NETWORK_MODE>7</NETWORK_MODE>
+              <SSID>CO</SSID>
+              <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+              <AUTHEN_TYPE>0</AUTHEN_TYPE>
+              <RADIO_BAND>0</RADIO_BAND>
+              <WIDE_CHANNEL>0</WIDE_CHANNEL>
+              <STANDARD_CHANNEL>0</STANDARD_CHANNEL>
+            </WIRELESS_COMMON>
+            <PROFILES>
+              <WIRELESS_PROFILE>
+                <NAME>Default</NAME>
+                <SSID>CO</SSID>
+                <NETWORK_TYPE>7</NETWORK_TYPE>
+                <RADIO_BAND>0</RADIO_BAND>
+                <AUTHEN_TYPE>0</AUTHEN_TYPE>
+                <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+                <WEP_KEY />
+                <WPA_EAP_USERID />
+                <WPA_EAP_PASSWORD />
+                <DHCP_ENABLED>1</DHCP_ENABLED>
+                <IP_ADDRESS />
+                <SUBNET_MASK />
+                <DEFAULT_GATEWAY />
+                <DNS />
+                <CHANNEL>1</CHANNEL>
+              </WIRELESS_PROFILE>
+            </PROFILES>
+            <CURRENT_PROFILE>
+              <WIRELESS_PROFILE>
+                <NAME>Default</NAME>
+                <SSID>CO</SSID>
+                <NETWORK_TYPE>7</NETWORK_TYPE>
+                <RADIO_BAND>0</RADIO_BAND>
+                <AUTHEN_TYPE>0</AUTHEN_TYPE>
+                <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+                <WEP_KEY />
+                <WPA_EAP_USERID />
+                <WPA_EAP_PASSWORD />
+                <DHCP_ENABLED>1</DHCP_ENABLED>
+                <IP_ADDRESS />
+                <SUBNET_MASK />
+                <DEFAULT_GATEWAY />
+                <DNS />
+                <CHANNEL>1</CHANNEL>
+              </WIRELESS_PROFILE>
+            </CURRENT_PROFILE>
+          </WIRELESS_CLIENT>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>658.5</X>
+            <Y>421</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195411584</MEM_ADDR>
+            <DEV_ADDR>192231720</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Cell Tower0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

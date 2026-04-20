@@ -1,0 +1,361 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="1941">Router</TYPE>
+          <NAME translate="true">Router1</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>eNonRemovableModule</TYPE>
+              <MODULE>
+                <TYPE>eNonRemovableModule</TYPE>
+                <MODEL />
+                <SLOT>
+                  <TYPE>eInterfaceCard</TYPE>
+                </SLOT>
+                <SLOT>
+                  <TYPE>eInterfaceCard</TYPE>
+                </SLOT>
+                <PORT>
+                  <TYPE>eCopperGigabitEthernet</TYPE>
+                  <POWER>false</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>1000000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>000A.4111.D401</MACADDRESS>
+                  <BIA>000A.4111.D401</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>false</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL />
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::20A:41FF:FE11:D401</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperGigabitEthernet</TYPE>
+                  <POWER>false</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>1000000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>000A.4111.D402</MACADDRESS>
+                  <BIA>000A.4111.D402</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>false</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL />
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::20A:41FF:FE11:D402</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.54</X_COORD>
+            <Y_COORD>1918.54</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>FTX1524ML3K</SERIALNUMBER>
+          <SYS_NAME>Router</SYS_NAME>
+          <RUNNINGCONFIG>
+            <LINE>!</LINE>
+            <LINE>version 15.1</LINE>
+            <LINE>no service timestamps log datetime msec</LINE>
+            <LINE>no service timestamps debug datetime msec</LINE>
+            <LINE>no service password-encryption</LINE>
+            <LINE>!</LINE>
+            <LINE>hostname Router</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>ip cef</LINE>
+            <LINE>no ipv6 cef</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>license udi pid CISCO1941/K9 sn FTX1524ML3K</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>spanning-tree mode pvst</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>interface GigabitEthernet0/0</LINE>
+            <LINE> no ip address</LINE>
+            <LINE> duplex auto</LINE>
+            <LINE> speed auto</LINE>
+            <LINE> shutdown</LINE>
+            <LINE>!</LINE>
+            <LINE>interface GigabitEthernet0/1</LINE>
+            <LINE> no ip address</LINE>
+            <LINE> duplex auto</LINE>
+            <LINE> speed auto</LINE>
+            <LINE> shutdown</LINE>
+            <LINE>!</LINE>
+            <LINE>interface Vlan1</LINE>
+            <LINE> no ip address</LINE>
+            <LINE> shutdown</LINE>
+            <LINE>!</LINE>
+            <LINE>ip classless</LINE>
+            <LINE>!</LINE>
+            <LINE>ip flow-export version 9</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>no cdp run</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>line con 0</LINE>
+            <LINE>!</LINE>
+            <LINE>line aux 0</LINE>
+            <LINE>!</LINE>
+            <LINE>line vty 0 4</LINE>
+            <LINE> login</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>end</LINE>
+          </RUNNINGCONFIG>
+          <STARTUPCONFIG />
+          <CURRENT_COMMAND_SET>1900_universal_base_15.1</CURRENT_COMMAND_SET>
+          <FILE_MANAGER>
+            <FILE class="CDirectory">
+              <FILE_NUMBER>0</FILE_NUMBER>
+              <NAME />
+              <DATE_TIME>0</DATE_TIME>
+              <PERMISSION>6</PERMISSION>
+              <FILE_CONTENT />
+              <FILES>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>flash:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>c1900-universalk9-mz.SPA.151-4.M4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1900_universal_base_15.1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>sigdef-category.xml</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIpsCategoryFileContent">
+                        <SIG_CAT />
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>sigdef-default.xml</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIpsDatFileContent">
+                        <ICMP_SIGNATURE>
+                          <SIGNATURE>
+                            <SIG_ID>2004</SIG_ID>
+                            <SUB_ID>0</SUB_ID>
+                            <RETIRED>0</RETIRED>
+                            <ENABLED>0</ENABLED>
+                            <EVENT_ACTION>0</EVENT_ACTION>
+                          </SIGNATURE>
+                        </ICMP_SIGNATURE>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>3</FILE_COUNTER>
+                  <CAPACITY>255744000</CAPACITY>
+                </FILE>
+              </FILES>
+            </FILE>
+          </FILE_MANAGER>
+          <CONFIG_REGISTER>8450</CONFIG_REGISTER>
+          <NEXT_CONFIG_REGISTER>8450</NEXT_CONFIG_REGISTER>
+          <CURRENT_BOOT_FILE>flash:/c1900-universalk9-mz.SPA.151-4.M4.bin</CURRENT_BOOT_FILE>
+          <BUILD_IN_ADDR>00D0.D36B.C44E</BUILD_IN_ADDR>
+          <SECURITY>
+            <KEY_NAME />
+            <TEMP_KEY_NAME />
+            <RSA_KEY />
+            <TEMP_RSA_KEY />
+            <TIME_DATE />
+            <ENABLED>0</ENABLED>
+            <MODULUS_BITS>0</MODULUS_BITS>
+          </SECURITY>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <LICENSE_MANAGER>
+            <NEXT_UNIQUE_ID>4</NEXT_UNIQUE_ID>
+            <LICENSES>
+              <LICENSE>
+                <UNIQUE_ID>1</UNIQUE_ID>
+                <STORE_INDEX>0</STORE_INDEX>
+                <CURRENT_BOOT>2</CURRENT_BOOT>
+                <NEXT_REBOOT>2</NEXT_REBOOT>
+                <LICENSE_COUNT>0</LICENSE_COUNT>
+                <RIGHT_TO_USE>0</RIGHT_TO_USE>
+                <ENFORCED>0</ENFORCED>
+                <LICENSE_TYPE>1</LICENSE_TYPE>
+                <FEATURE_NAME>ipbasek9</FEATURE_NAME>
+                <TECHNOLOGY>ipbase</TECHNOLOGY>
+                <VERSION>1.0</VERSION>
+                <LICENSE_STATE>Active, In Use</LICENSE_STATE>
+                <EVAL_TOTAL>208 weeks 2 days</EVAL_TOTAL>
+                <EVAL_LEFT>208 weeks 2 days</EVAL_LEFT>
+                <EVAL_USED>0  minute  0  second</EVAL_USED>
+                <LICENSE_PRIORITY>Medium</LICENSE_PRIORITY>
+                <STORE_NAME>Primary License Storage</STORE_NAME>
+              </LICENSE>
+              <LICENSE>
+                <UNIQUE_ID>2</UNIQUE_ID>
+                <STORE_INDEX>0</STORE_INDEX>
+                <CURRENT_BOOT>0</CURRENT_BOOT>
+                <NEXT_REBOOT>0</NEXT_REBOOT>
+                <LICENSE_COUNT>0</LICENSE_COUNT>
+                <RIGHT_TO_USE>1</RIGHT_TO_USE>
+                <ENFORCED>1</ENFORCED>
+                <LICENSE_TYPE>5</LICENSE_TYPE>
+                <FEATURE_NAME>securityk9</FEATURE_NAME>
+                <TECHNOLOGY>security</TECHNOLOGY>
+                <VERSION>1.0</VERSION>
+                <LICENSE_STATE>Inactive</LICENSE_STATE>
+                <EVAL_TOTAL>208 weeks 2 days</EVAL_TOTAL>
+                <EVAL_LEFT>208 weeks 2 days</EVAL_LEFT>
+                <EVAL_USED>0  minute  0  second</EVAL_USED>
+                <LICENSE_PRIORITY>None</LICENSE_PRIORITY>
+                <STORE_NAME>Evaluation License Storage</STORE_NAME>
+              </LICENSE>
+              <LICENSE>
+                <UNIQUE_ID>3</UNIQUE_ID>
+                <STORE_INDEX>1</STORE_INDEX>
+                <CURRENT_BOOT>0</CURRENT_BOOT>
+                <NEXT_REBOOT>0</NEXT_REBOOT>
+                <LICENSE_COUNT>0</LICENSE_COUNT>
+                <RIGHT_TO_USE>1</RIGHT_TO_USE>
+                <ENFORCED>1</ENFORCED>
+                <LICENSE_TYPE>0</LICENSE_TYPE>
+                <FEATURE_NAME>datak9</FEATURE_NAME>
+                <TECHNOLOGY>data</TECHNOLOGY>
+                <VERSION>1.0</VERSION>
+                <LICENSE_STATE>Inactive</LICENSE_STATE>
+                <EVAL_TOTAL>208 weeks 2 days</EVAL_TOTAL>
+                <EVAL_LEFT>208 weeks 2 days</EVAL_LEFT>
+                <EVAL_USED>0  minute  0  second</EVAL_USED>
+                <LICENSE_PRIORITY>None</LICENSE_PRIORITY>
+                <STORE_NAME>Evaluation License Storage</STORE_NAME>
+              </LICENSE>
+            </LICENSES>
+          </LICENSE_MANAGER>
+          <VLANS>
+            <VLAN number="1" name="default" />
+            <VLAN number="1002" name="fddi-default" />
+            <VLAN number="1003" name="token-ring-default" />
+            <VLAN number="1004" name="fddinet-default" />
+            <VLAN number="1005" name="trnet-default" />
+          </VLANS>
+          <VTP>
+            <DOMAIN_NAME />
+            <MODE>0</MODE>
+            <VERSION>1</VERSION>
+            <PASSWORD />
+            <CONFIG_REVISION>0</CONFIG_REVISION>
+            <UPDATER_IP>0.0.0.0</UPDATER_IP>
+            <UPDATE_TIMESTAMP>0-0-00 00:00:00</UPDATE_TIMESTAMP>
+          </VTP>
+          <SIG_IPSPROCESS>
+            <SIGNATURE>
+              <SIG_ID>2004</SIG_ID>
+              <SUB_ID>0</SUB_ID>
+              <RETIRED>0</RETIRED>
+              <ENABLED>0</ENABLED>
+              <EVENT_ACTION>0</EVENT_ACTION>
+            </SIGNATURE>
+          </SIG_IPSPROCESS>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>244.5</X>
+            <Y>122</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>193836272</MEM_ADDR>
+            <DEV_ADDR>195608992</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,Router1</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

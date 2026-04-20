@@ -1,0 +1,92 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="AccessPoint-PT-A">AccessPoint</TYPE>
+          <NAME translate="true">Access Point1</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0001.C701.2141</MACADDRESS>
+                  <BIA>0001.C701.2141</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>eNonRemovableModule</TYPE>
+              <MODULE>
+                <TYPE>eNonRemovableModule</TYPE>
+                <MODEL />
+                <PORT>
+                  <TYPE>eAccessPointWirelessA</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>11000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0004.9A0C.127A</MACADDRESS>
+                  <BIA>0004.9A0C.127A</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>112</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.54</X_COORD>
+            <Y_COORD>1918.54</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810C9T3</SERIALNUMBER>
+          <WIRELESS_SERVER>
+            <WIRELESS_COMMON>
+              <NETWORK_MODE>5</NETWORK_MODE>
+              <SSID>Default</SSID>
+              <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+              <AUTHEN_TYPE>0</AUTHEN_TYPE>
+              <RADIO_BAND>0</RADIO_BAND>
+              <WIDE_CHANNEL>0</WIDE_CHANNEL>
+              <STANDARD_CHANNEL>0</STANDARD_CHANNEL>
+            </WIRELESS_COMMON>
+            <SSID_BROADCAST_ENABLED>1</SSID_BROADCAST_ENABLED>
+            <MAC_FILTER_ENABLED>0</MAC_FILTER_ENABLED>
+            <ALLOW_ACCESS>0</ALLOW_ACCESS>
+          </WIRELESS_SERVER>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>212</X>
+            <Y>409</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195408672</MEM_ADDR>
+            <DEV_ADDR>192234000</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,Access Point1</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

@@ -1,0 +1,1851 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Server-PT">Server</TYPE>
+          <NAME translate="true">Server0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtHostModule</TYPE>
+              <MODULE>
+                <TYPE>ePtHostModule</TYPE>
+                <MODEL>PT-HOST-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0040.0BB7.99D0</MACADDRESS>
+                  <BIA>0040.0BB7.99D0</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>false</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL>FE80::240:BFF:FEB7:99D0</IPV6_LINK_LOCAL>
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::240:BFF:FEB7:99D0</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtHostModule</TYPE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.83</X_COORD>
+            <Y_COORD>1918.83</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT08100M07</SERIALNUMBER>
+          <SYS_NAME>PC</SYS_NAME>
+          <GATEWAY />
+          <DNS_CLIENT>
+            <SERVER_IP />
+            <SERVER_IPV6 />
+          </DNS_CLIENT>
+          <EMAIL_CLIENT>
+            <ENABLED>0</ENABLED>
+            <NAME />
+            <MAIL_ID />
+            <POP3_SERVER />
+            <SMTP_SERVER />
+            <USER />
+            <PASSWORD />
+            <NO_OF_MAILS>0</NO_OF_MAILS>
+          </EMAIL_CLIENT>
+          <WIRELESS_CLIENT>
+            <WIRELESS_COMMON>
+              <NETWORK_MODE>7</NETWORK_MODE>
+              <SSID>Default</SSID>
+              <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+              <AUTHEN_TYPE>0</AUTHEN_TYPE>
+              <RADIO_BAND>0</RADIO_BAND>
+              <WIDE_CHANNEL>0</WIDE_CHANNEL>
+              <STANDARD_CHANNEL>0</STANDARD_CHANNEL>
+            </WIRELESS_COMMON>
+            <PROFILES>
+              <WIRELESS_PROFILE>
+                <NAME>Default</NAME>
+                <SSID>Default</SSID>
+                <NETWORK_TYPE>7</NETWORK_TYPE>
+                <RADIO_BAND>0</RADIO_BAND>
+                <AUTHEN_TYPE>0</AUTHEN_TYPE>
+                <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+                <WEP_KEY />
+                <WPA_EAP_USERID />
+                <WPA_EAP_PASSWORD />
+                <DHCP_ENABLED>1</DHCP_ENABLED>
+                <IP_ADDRESS />
+                <SUBNET_MASK />
+                <DEFAULT_GATEWAY />
+                <DNS />
+                <CHANNEL>1</CHANNEL>
+              </WIRELESS_PROFILE>
+            </PROFILES>
+            <CURRENT_PROFILE>
+              <WIRELESS_PROFILE>
+                <NAME>Default</NAME>
+                <SSID>Default</SSID>
+                <NETWORK_TYPE>7</NETWORK_TYPE>
+                <RADIO_BAND>0</RADIO_BAND>
+                <AUTHEN_TYPE>0</AUTHEN_TYPE>
+                <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+                <WEP_KEY />
+                <WPA_EAP_USERID />
+                <WPA_EAP_PASSWORD />
+                <DHCP_ENABLED>1</DHCP_ENABLED>
+                <IP_ADDRESS />
+                <SUBNET_MASK />
+                <DEFAULT_GATEWAY />
+                <DNS />
+                <CHANNEL>1</CHANNEL>
+              </WIRELESS_PROFILE>
+            </CURRENT_PROFILE>
+          </WIRELESS_CLIENT>
+          <DHCP_CLIENT>
+            <PORT_DATA_MAP />
+          </DHCP_CLIENT>
+          <ACL_PROCESS>
+            <ACLS />
+          </ACL_PROCESS>
+          <ACL_V6_PROCESS>
+            <ACLS />
+          </ACL_V6_PROCESS>
+          <GATEWAYV6 />
+          <ISATAP_ENABLED>false</ISATAP_ENABLED>
+          <ISATAP_ROUTER />
+          <DHCPV6_MAIN>
+            <PARTIAL_DUID>1E-1C-9A-7A-</PARTIAL_DUID>
+            <ENABLED_PORTS />
+          </DHCPV6_MAIN>
+          <NDV6>
+            <ENABLED_HOST />
+            <ENABLED_ROUTER>1</ENABLED_ROUTER>
+            <SERVER_ROUTER_PORT_DATA_HEAD>
+              <PORT_DATA_PAIR>
+                <PORT_NAME>FastEthernet0</PORT_NAME>
+                <SERVER_ROUTER_PORT_DATA>
+                  <ADV_SEND_ADVERTISEMENT>1</ADV_SEND_ADVERTISEMENT>
+                  <MAX_RTR_ADV_INTERVAL>600</MAX_RTR_ADV_INTERVAL>
+                  <MIN_RTR_ADV_INTERVAL>198</MIN_RTR_ADV_INTERVAL>
+                  <ADV_MANAGED_FLAG>0</ADV_MANAGED_FLAG>
+                  <ADV_OTHER_CONFIG_FLAG>0</ADV_OTHER_CONFIG_FLAG>
+                  <ADV_LINK_MTU>1500</ADV_LINK_MTU>
+                  <ADV_REACHABLE_TIME>0</ADV_REACHABLE_TIME>
+                  <ADV_RESTRANS_TIMER>0</ADV_RESTRANS_TIMER>
+                  <ADV_CUR_HOP_LIMIT>64</ADV_CUR_HOP_LIMIT>
+                  <ADV_DEFAULT_LIFETIME>1800</ADV_DEFAULT_LIFETIME>
+                  <ENABLED_ROUTER>1</ENABLED_ROUTER>
+                </SERVER_ROUTER_PORT_DATA>
+              </PORT_DATA_PAIR>
+            </SERVER_ROUTER_PORT_DATA_HEAD>
+          </NDV6>
+          <NF_COLLECTOR>
+            <ENABLED>0</ENABLED>
+          </NF_COLLECTOR>
+          <VOIP_TFTP_IP>
+            <TFTP_IP>0.0.0.0</TFTP_IP>
+            <IS_DEFAULT_TFTP>1</IS_DEFAULT_TFTP>
+          </VOIP_TFTP_IP>
+          <FILE_MANAGER>
+            <FILE class="CDirectory">
+              <FILE_NUMBER>0</FILE_NUMBER>
+              <NAME />
+              <DATE_TIME>0</DATE_TIME>
+              <PERMISSION>6</PERMISSION>
+              <FILE_CONTENT />
+              <FILES>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>Desktop:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>WRT300N-v1.03.6_fw,0.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CLinksysFirmwareUpgPage">
+                        <TEXT>Linkys firmware1</TEXT>
+                        <Firmware_Version>v1.03.6</Firmware_Version>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>WRT300N-v1.1_1.51.2_fw,0.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CLinksysFirmwareUpgPage">
+                        <TEXT>Linkys firmware2</TEXT>
+                        <Firmware_Version>v1.1_1.51.2</Firmware_Version>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>2</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>c:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>sampleFile.txt</NAME>
+                      <DATE_TIME>4294967295</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CTextFileContent">
+                        <TEXT>This is a sample text file</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>1</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>ftp:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>asa842-k8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CASAFileContent">
+                        <DEVICE_TYPE>ASA</DEVICE_TYPE>
+                        <SET_NAME>5505_8.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>c1841-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>c1841-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>c1841-ipbasek9-mz.124-12.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>c2600-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>6</FILE_NUMBER>
+                      <NAME>c2600-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>7</FILE_NUMBER>
+                      <NAME>c2600-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>8</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>9</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.151-4.M4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_15.1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>10</FILE_NUMBER>
+                      <NAME>c2800nm-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>11</FILE_NUMBER>
+                      <NAME>c2800nm-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>12</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>13</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA8</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>14</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.FX.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_FX</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>15</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.SEE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_SEE1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>16</FILE_NUMBER>
+                      <NAME>c2960-lanbasek9-mz.150-2.SE4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_15.0_SE4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>17</FILE_NUMBER>
+                      <NAME>c3560-advipservicesk9-mz.122-37.SE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>MultiLayerSwitch</DEVICE_TYPE>
+                        <SET_NAME>3560_advip_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>18</FILE_NUMBER>
+                      <NAME>pt1000-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>pt_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>19</FILE_NUMBER>
+                      <NAME>pt3000-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>pt_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>19</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>http:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>copyrights.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;pre&gt;
+Cisco Packet Tracer Academy License Agreement
+
+You must agree to the following terms and conditions "User Agreement" that define proper use of this software. 
+
+The Academy acknowledges and agrees that Cisco Packet Tracer is provided by Cisco to the Academy and the Academy will not, or allow anyone else to, distribute the software to any third party not associated with the Networking Academy Program, including, without limitation, any competitors of Cisco.  Academies may distribute one copy of Cisco Packet Tracer to each Academy student, provided, however, the Academy uses reasonable efforts not to distribute to any student whom the Academy has a reason to know or the student has disclosed to Academy that the student cannot adhere to the terms and conditions set forth herein. Academy distribution of Cisco Packet Tracer to students shall include all copyright, trademarks, or other proprietary notices and be limited to either: a) posting on Academy's Local Area Network Server with password-protected access, or b) posting to a password-protected Academy FTP site. 
+
+I.    PROPRIETARY RIGHTS AND LICENSING
+
+Cisco hereby grants Academy a nonexclusive, nontransferable license to use Cisco Packet Tracer solely for providing instructional practice to students in accordance with the terms and conditions set forth herein. The Academy shall not make any copies or duplicates of Cisco Packet Tracer except to distribute directly to Academy students. The Academy may not sublicense to any person its rights to distribute Cisco Packet Tracer but may allow students to use Cisco Packet Tracer. 
+Cisco retains all title to, and, except as expressly licensed herein, all rights to Cisco Packet Tracer, all copies thereof and all related documentation and materials, and all of Cisco's Marks or any other designations. Any invoices of Cisco purporting to cover such items do not convey title to, or patent rights, copyrights, or any other proprietary interest in, such items to the Academy. 
+Academy agrees, except as otherwise expressly authorized hereunder, not to (i) make any copies, duplicates or derivative works of Cisco Packet Tracer for profit (ii) remove, conceal, alter, or cover any product identification or notices of any proprietary or copyright restrictions from Cisco Packet Tracer. 
+II.                GUIDELINES FOR AVOIDING INFRINGEMENT
+
+Activities to Avoid-The following list describes a few of the specific scenarios to help avoid infringing any Cisco copyright or trademark rights:
+
+-      Do not copy, reproduce, download, sell, or distribute, directly or indirectly, any Cisco copyrighted materials including Cisco Packet Tracer to a third party. 
+
+-      Do not post Cisco Packet Tracer on publicly accessible web sites, ftp sites or online message boards. 
+
+ 
+
+Cisco Packet Tracer End User License Agreement
+
+IMPORTANT: PLEASE READ THIS SOFTWARE LICENSE AGREEMENT CAREFULLY. DOWNLOADING, INSTALLING OR USING THE Cisco Packet Tracer SOFTWARE CONSTITUTES ACCEPTANCE OF THIS AGREEMENT.
+
+CISCO IS WILLING TO LICENSE THE SOFTWARE TO YOU ONLY UPON THE CONDITION THAT YOU ACCEPT ALL OF THE TERMS CONTAINED IN THIS LICENSE AGREEMENT. BY DOWNLOADING OR INSTALLING THE SOFTWARE, OR USING THE EQUIPMENT THAT CONTAINS THIS SOFTWARE, YOU ARE BINDING YOURSELF AND THE BUSINESS OR EDUCATIONAL ENTITY THAT YOU REPRESENT (COLLECTIVELY, "User") TO THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, THEN CISCO IS UNWILLING TO LICENSE THE SOFTWARE TO YOU AND YOU ARE NOT AUTHORIZED TO DOWNLOAD, INSTALL OR USE THE SOFTWARE. 
+
+The following terms of this Software License Agreement ("Agreement") govern Users access and use of the Software, except to the extent there is a separate signed agreement between User and Cisco governing Users use of the Software. To the extent of a conflict between the provisions of the foregoing documents, the order of precedence shall be (1) the signed agreement and (2) this Software License Agreement.
+
+License. Conditioned upon compliance with the terms and conditions of this Agreement, Cisco Systems, Inc. ("Cisco") grants to User a royalty-free, nonexclusive, and nontransferable license to use the Software and Documentation solely to create configuration simulations for classroom use in teaching students participating in the Cisco Networking Academy program. "Documentation" means written information (whether contained in user or technical manuals, training materials, specifications or otherwise) specifically pertaining to the Software and made available by Cisco with the Software in any manner (including on CD-Rom, or on-line). 
+
+General Limitations. This is a license, not a transfer of title, to the Software and Documentation, and Cisco retains ownership of all copies of the Software and Documentation. User acknowledges that the Software and Documentation contain trade secrets of Cisco, its suppliers or licensors, including but not limited to the specific internal design and structure of individual programs and associated interface information. Accordingly, except as otherwise expressly provided under this Agreement, User shall have no right, and User specifically agrees not to:
+
+(i) transfer, assign or sublicense its license rights to any other person or entity, or use the Software on unauthorized or secondhand Cisco equipment, and User acknowledges that any attempted transfer, assignment, sublicense or use shall be void;
+
+(ii) make error corrections to or otherwise modify or adapt the Software or create derivative works based upon the Software, or permit third parties to do the same;
+
+(iii) reverse engineer or decompile, decrypt, disassemble or otherwise reduce the Software to human-readable form, except to the extent otherwise expressly permitted under applicable law notwithstanding this restriction;
+
+(iv) use or permit the Software to be used to perform services for third parties, whether on a service bureau or time sharing basis or otherwise, without the express written authorization of Cisco; or
+
+(vi) disclose, provide, or otherwise make available trade secrets contained within the Software and Documentation in any form to any third party without the prior written consent of Cisco. User shall implement reasonable security measures to protect such trade secrets.
+
+To the extent required by law, and at User's written request, Cisco shall provide User with the interface information needed to achieve interoperability between the Software and another independently created program, on payment of Cisco's applicable fee, if any. User shall observe strict obligations of confidentiality with respect to such information and shall use such information in compliance with any applicable terms and conditions upon which Cisco makes such information available. 
+
+Software, Upgrades and Additional Copies. For purposes of this Agreement, "Software" shall include (and the terms and conditions of this Agreement shall apply to) computer programs, as provided to User by Cisco or an authorized Cisco representative, and any upgrades, updates, bug fixes or modified versions thereto (collectively, "Upgrades") or backup copies of the Software licensed or provided to User by Cisco or an authorized Cisco reseller. NOTWITHSTANDING ANY OTHER PROVISION OF THIS AGREEMENT: (1) User HAS NO LICENSE OR RIGHT TO USE ANY ADDITIONAL COPIES OR UPGRADES UNLESS User, AT THE TIME OF ACQUIRING SUCH COPY OR UPGRADE, ALREADY HOLDS A VALID LICENSE TO THE ORIGINAL SOFTWARE; AND (2) THE MAKING AND USE OF ADDITIONAL COPIES IS LIMITED TO NECESSARY BACKUP PURPOSES ONLY. 
+
+Proprietary Notices. User agrees to maintain and reproduce all copyright and other proprietary notices on all copies, in any form, of the Software in the same form and manner that such copyright and other proprietary notices are included on the Software. Except as expressly authorized in this Agreement, User shall not make any copies or duplicates of any Software without the prior written permission of Cisco.
+
+Term and Termination. This Agreement and the license granted herein shall remain effective until terminated. User may terminate this Agreement and the license at any time by destroying all copies of Software and any Documentation. User's rights under this Agreement will terminate immediately without notice from Cisco if User fails to comply with any provision of this Agreement. Upon termination, User shall destroy all copies of Software and Documentation in its possession or control. All confidentiality obligations of User and all limitations of liability and disclaimers and restrictions of warranty shall survive termination of this Agreement. In addition, the provisions of the sections titled "U.S. Government End User Purchasers" and "General Terms Applicable to the Limited Warranty Statement and Software License" shall survive termination of this Agreement. 
+
+Export. Software and Documentation, including technical data, may be subject to U.S. export control laws, including the U.S. Export Administration Act and its associated regulations, and may be subject to export or import regulations in other countries. User agrees to comply strictly with all such regulations and acknowledges that it has the responsibility to obtain licenses to export, re-export, or import Software and Documentation.
+
+U.S. Government End User Purchasers. The Software and Documentation qualify as "commercial items," as that term is defined at Federal Acquisition Regulation ("FAR") (48 C.F.R.) 2.101, consisting of "commercial computer software" and "commercial computer software documentation" as such terms are used in FAR 12.212. Consistent with FAR 12.212 and DoD FAR Supp. 227.7202-1 through 227.7202-4, and notwithstanding any other FAR or other contractual clause to the contrary in any agreement into which this Software License Agreement may be incorporated, User may provide to Government end user or, if this Agreement is direct, Government end user will acquire, the Software and Documentation with only those rights set forth in this Software License Agreement. Use of either the Software or Documentation or both constitutes agreement by the Government that the Software and Documentation are "commercial computer software" and "commercial computer software documentation," and constitutes acceptance of the rights and restrictions herein. 
+
+No Warranty
+THE SOFTWARE FURNISHED UNDER THIS AGREEMENT IS PROVIDED ON AN "AS IS" BASIS, WITHOUT ANY WARRANTIES OR REPRESENTATIONS EXPRESS, IMPLIED OR STATUTORY; INCLUDING, WITHOUT LIMITATION, WARRANTIES OF QUALITY, PERFORMANCE, NONINFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. NOR ARE THERE ANY WARRANTIES CREATED BY A COURSE OF DEALING, COURSE OF PERFORMANCE OR TRADE USAGE. DEVELOPER DOES NOT WARRANT THAT THE SOFTWARE WILL MEET USER'S NEEDS OR BE FREE FROM ERRORS, OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED. THE FOREGOING EXCLUSIONS AND DISCLAIMERS ARE AN ESSENTIAL PART OF THIS AGREEMENT AND FORMED THE BASIS FOR DETERMINING THE FEES CHARGED FOR THE SOFTWARE. 
+
+General Terms Applicable to the No Warranty Statement and Software License
+
+Disclaimer of Liabilities. REGARDLESS WHETHER ANY REMEDY SET FORTH HEREIN FAILS OF ITS ESSENTIAL PURPOSE OR OTHERWISE, IN NO EVENT WILL CISCO OR ITS SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, PROFIT, OR LOST OR DAMAGED DATA, BUSINESS INTERRUPTION, LOSS OF CAPITAL, OR FOR SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL, OR PUNITIVE DAMAGES HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY OR WHETHER ARISING OUT OF THE USE OF OR INABILITY TO USE SOFTWARE OR OTHERWISE AND EVEN IF CISCO OR ITS SUPPLIERS OR LICENSORS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. In no event shall Cisco's or its suppliers' or licensors' liability to User, whether in contract, tort (including negligence), breach of warranty, or otherwise, exceed the price paid by User for the Software that gave rise to the claim or if the Software is part of another Product, the price paid for such other Product. BECAUSE SOME STATES OR JURISDICTIONS DO NOT ALLOW LIMITATION OR EXCLUSION OF CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+
+User agrees that the limitations of liability and disclaimers set forth herein will apply regardless of whether User has accepted the Software or any other product or service delivered by Cisco. User acknowledges and agrees that Cisco has set its prices and entered into this Agreement in reliance upon the disclaimers of warranty and the limitations of liability set forth herein, that the same reflect an allocation of risk between the parties (including the risk that a contract remedy may fail of its essential purpose and cause consequential loss), and that the same form an essential basis of the bargain between the parties. 
+
+The Warranty and the Software License shall be governed by and construed in accordance with the laws of the State of California, without reference to or application of choice of law rules or principles. The United Nations Convention on the International Sale of Goods shall not apply. If any portion hereof is found to be void or unenforceable, the remaining provisions of the Agreement shall remain in full force and effect. Except as expressly provided herein, this Agreement constitutes the entire agreement between the parties with respect to the license of the Software and Documentation and supersedes any conflicting or additional terms contained in any purchase order or elsewhere, all of which terms are excluded. This Agreement has been written in the English language, and the parties agree that the English version will govern. User waives any rights User may have under the law of User's country or province to have this Agreement written in any language other than English. 
+
+ 
+
+Cisco, Cisco Systems, and the Cisco Systems logo are registered trademarks of Cisco Systems, Inc. in the U.S. and certain other countries.  All other trademarks mentioned in this document are the property of their respective owners. 
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>cscoptlogo177x111.jpg</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>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</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>helloworld.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+Hello, world!
+&lt;br&gt;&lt;a href='index.html'&gt;Back&lt;/a&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>image.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;body&gt;
+&lt;center&gt;&lt;font size='+2' color='blue'&gt;Image of Cisco Logo&lt;/font&gt;&lt;/center&gt;
+&lt;p&gt;This is an image of Cisco Logo&lt;/p&gt;
+&lt;p&gt;&lt;a href='cscoptlogo177x111.jpg'&gt;&lt;img src="/cscoptlogo177x111.jpg"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;&lt;a href='index.html'&gt;Back&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>index.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;center&gt;&lt;font size='+2' color='blue'&gt;Cisco Packet Tracer&lt;/font&gt;&lt;/center&gt;
+&lt;hr&gt;Welcome to Cisco Packet Tracer. Opening doors to new opportunities. Mind Wide Open.
+&lt;p&gt;Quick Links:
+&lt;br&gt;&lt;a href='helloworld.html'&gt;A small page&lt;/a&gt;
+&lt;br&gt;&lt;a href='copyrights.html'&gt;Copyrights&lt;/a&gt;
+&lt;br&gt;&lt;a href='image.html'&gt;Image page&lt;/a&gt;
+&lt;br&gt;&lt;a href='cscoptlogo177x111.jpg'&gt;Image&lt;/a&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>5</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>ioe:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>configure_action.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;&lt;head&gt;&lt;style type="text/css"&gt;.alignleft { float: left;}.alignright { float: right; margin-right: 3px;}&lt;/style&gt;&lt;script&gt;function addCondition() {  var div = document.getElementById("configHomePage");  div.style.display = "none";  div = document.getElementById("configPage");  div.style.display = "block";  document.getElementById("configDescText").value="";  document.getElementById("configDescText").focus();  document.getElementById("configCondText").value="";  document.getElementById("configActionText").value="";  document.getElementById("syntaxError").style.display = "none";}function removeHref(input) {  var description = input.replace("&lt;a href=\"javascript:void(0)\"&gt;", "").replace("&lt;/a&gt;", "");  var temp = document.createElement('div');  temp.innerHTML = description;  return temp.childNodes[0].nodeValue;}function updateCondition(rowIndex) {  var div = document.getElementById("configHomePage");  div.style.display = "none";  div = document.getElementById("configPage");  div.style.display = "block";  var condTable = document.getElementById("condTable");  document.getElementById("configDescText").value = removeHref(condTable.rows[rowIndex].cells[0].innerHTML);  document.getElementById("configCondText").value = condTable.rows[rowIndex].cells[1].childNodes[0].nodeValue;  document.getElementById("configCondText").focus();  document.getElementById("configActionText").value = condTable.rows[rowIndex].cells[2].childNodes[0].nodeValue;  document.getElementById("syntaxError").style.display = "none";}function toDone() {  CHttpFormExtractor.validateIoeCondition();}function cancelAddCondition() {  var div = document.getElementById("configPage");  div.style.display = "none";  div = document.getElementById("configHomePage");  div.style.display = "block";} function deleteConditions() {  var condTable = document.getElementById("condTable");  var checkedCnt = 0;  var deleteCondString = "";  for (var i=1;i&lt;condTable.rows.length; i++) {    if (condTable.rows[i].cells[3].children[0].checked) {      deleteCondString += "&lt;deleteCondition&gt;" + condTable.rows[i].cells[0].innerHTML;      checkedCnt++;    }  }  if (checkedCnt &gt; 0) {    document.getElementById("ioeDeleteText").value = deleteCondString;    CHttpFormExtractor.submitRemoveConditions();    document.forms["removeConditions"].submit();  }}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;&lt;a class="alignleft" href="home.html"&gt;Home&lt;/a&gt;  &lt;a class="alignright" href="logout_action.php"&gt;Logout&lt;/a&gt;  &lt;a class="alignright" href="configure_action.html"&gt;Configure&lt;/a&gt;&lt;/div&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;div style="display:&lt;?=$showHomePage?&gt;; text-align:center;" id="configHomePage"&gt;&lt;center&gt;&lt;h3&gt;Configuration Page&lt;/h3&gt;  &lt;table id="condTable" border="1"&gt;    &lt;tr&gt;      &lt;th&gt;Description&lt;/th&gt;      &lt;th&gt;Condition&lt;/th&gt;      &lt;th&gt;Action&lt;/th&gt;      &lt;th&gt;Delete&lt;/th&gt;    &lt;/tr&gt;&lt;?=$data?&gt;
+  &lt;/table&gt;  &lt;form name="addNewConidtion" action="condition_add_action.php" style="display: inline;"&gt;    &lt;input type=button value="Add" onClick="addCondition();"&gt;  &lt;/form&gt;  &lt;form name="removeConditions" action="condition_delete_action.php" style="display: inline;"&gt;    &lt;input type="text" id="ioeDeleteText" style="display:none;"&gt;    &lt;input type=button value="Remove" onClick="deleteConditions();"&gt;  &lt;/form&gt;&lt;/center&gt;&lt;/div&gt;&lt;div style="display:&lt;?=$showConfigPage?&gt;; text-align:center;" id="configPage"&gt;&lt;center&gt;&lt;h3&gt;Configuration Page&lt;/h3&gt;  &lt;table id="configTable" border="1"&gt;    &lt;tr&gt;      &lt;td&gt;Description&lt;/td&gt;      &lt;td style="width:100%;"&gt;&lt;textarea id="configDescText" rows="1" style="width:100%; height:100%; border:none;"&gt;&lt;?=$descText?&gt;&lt;/textarea&gt;&lt;/td&gt;    &lt;/tr&gt;    &lt;tr&gt;      &lt;td&gt;Condition&lt;/td&gt;      &lt;td style="width:100%;"&gt;&lt;textarea id="configCondText" rows="1" style="width:100%; height:100%; border:none;"&gt;&lt;?=$conditionText?&gt;&lt;/textarea&gt;&lt;/td&gt;    &lt;/tr&gt;    &lt;tr&gt;      &lt;td&gt;Action&lt;/td&gt;      &lt;td style="width:100%;"&gt;&lt;textarea id="configActionText" rows="5" style="width:100%; height:100%; border:none;"&gt;&lt;?=$actionText?&gt;&lt;/textarea&gt;&lt;/td&gt;    &lt;/tr&gt;  &lt;/table&gt;  &lt;div id="syntaxError" style="display:&lt;?=$syntaxDisplay?&gt;;"&gt;    &lt;?=$syntaxError?&gt;&lt;br&gt;  &lt;/div&gt;  &lt;form name="addNewConidtion" action="condition_add_action.php"&gt;    &lt;button type="submit" onClick="toDone();"&gt;Submit&lt;/button&gt;    &lt;button type="reset" onClick="cancelAddCondition();"&gt;Cancel&lt;/button&gt;  &lt;/form&gt;&lt;/center&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>create_account.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function validateAccount()
+{
+  if (document.forms["createAccount"]["userid"].value.length == 0)
+  {
+    alert("Please enter the userid.");
+    return false;
+  }
+  else if (document.forms["createAccount"]["pw"].value.length == 0)
+  {
+    alert("Please enter the password.");
+    return false;
+  }
+  else
+  {
+    CHttpFormExtractor.submitIoeLogin();
+    return true;
+  }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h3&gt;Registration Server Account Creation&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;form name="createAccount" method="post" action="account_action.php" onsubmit="return validateAccount()"&gt;
+Username: &lt;input type="text" name="userid" id="userid" value="" size="20"&gt;&lt;br&gt;
+Password: &lt;input type="password" name="pw" id="pw" value="" size="20"&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;input type="submit" name="submit" value="Create"&gt;
+&lt;/center&gt;
+&lt;/form&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>home.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;&lt;head&gt;&lt;script&gt;function addDevice() {  var device = prompt("Please enter device serial number","");  if (device != null) {    document.getElementById("ioeSerialText").value = device;    CHttpFormExtractor.submitAddNewDevice();    document.forms["addDeviceform"].submit();  }}function removeDevices() {  var deviceTable = document.getElementById("deviceTable");  var url = document.forms["removeDeviceform"].action;  var checkedCnt = 0;  var deleteDeviceString = "";  for (var i=1;i&lt;deviceTable.rows.length; i++) {    if (deviceTable.rows[i].cells[5].children[0].checked) {      deleteDeviceString += "&lt;deleteDevice&gt;" + deviceTable.rows[i].cells[2].innerHTML;      checkedCnt++;    }  }  if (checkedCnt &gt; 0) {    document.getElementById("ioeDeleteText").value = deleteDeviceString;    CHttpFormExtractor.submitRemoveDevices();    document.forms["removeDeviceform"].submit();  }}function updateDevices() {  var deviceTable = document.getElementById("deviceTable");  var url = document.forms["submitDeviceform"].action;  var checkedCnt = 0;  var updateDeviceString = "";  for (var i=1;i&lt;deviceTable.rows.length; i++) {    var deviceAlias = deviceTable.rows[i].cells[1].children[0].value;    if (deviceAlias != 'Enter alias here') {      updateDeviceString += "&lt;updateDevice&gt;" + deviceTable.rows[i].cells[2].innerHTML + "&lt;alias&gt;" + deviceAlias;      checkedCnt++;    }  }  if (checkedCnt &gt; 0) {    document.getElementById("ioeUpdateText").value = updateDeviceString;    CHttpFormExtractor.submitUpdateDevices();    document.forms["submitDeviceform"].submit();  }}function showWarning() {  document.getElementById("warningMsg").style.display = "block";  document.getElementById("overlay").style.display = "block";}function closeWarning() {  document.getElementById("warningMsg").style.display = "none";  document.getElementById("overlay").style.display = "none";}function aliasOnFocus(aliasElement) {  if (aliasElement.value == 'Enter alias here') {    aliasElement.value = '';  }}function aliasOnBlur(aliasElement) {  if (aliasElement.value == '') {    aliasElement.value = 'Enter alias here';  }}&lt;/script&gt;&lt;style type="text/css"&gt;div#warningMsg { display: &lt;?=$display?&gt;; position: relative; z-index: 3; margin: 150px auto 0px auto; width: 150px;  height: 100px; background: #FFF; color: #000; }
+div#overlay { display: &lt;?=$display?&gt;; z-index: 2; background: #000; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; opacity: 0.7; }
+div#homePage { position:absolute; margin-left: auto; margin-right: auto; left: 0px; right: 0px; top: 0px;}
+.alignleft {float: left;}
+.alignright {float: right; margin-right: 3px;}
+table {border: none; border-collapse: collapse; width: 90%; background-color: #464646; border-radius: 10px; box-shadow: 4px 3px 10px 5px;}
+th {padding: 1%; padding-left: 5px; padding-right: 5px; color: white; background-color: #464646; border-radius: 10px;}
+td {text-align: center; padding: 1%;}
+div { margin: 1em;}
+form {display: inline;}
+.evenCell {background-color: #6E6D6D;}
+.oddCell {background-color: #A2A0A0;}
+input[type=button] {width:25%;}
+a {font-size: .8em;}
+h3 {font-size: 1.5em;}
+#homePageLink {padding-left: 10%;}
+#configureLink {padding-right: 2%;}
+#logoutLink {padding-right: 10%;}
+.aliasEdit {background-color: inherit; border:none; text-align: center;}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div id="overlay"&gt;&lt;/div&gt; &lt;div id="warningMsg"&gt; &lt;center&gt;&lt;p&gt;Operation failed&lt;/p&gt; &lt;button onmousedown="closeWarning()"&gt;Close&lt;/button&gt;&lt;/center&gt;&lt;/div&gt;&lt;div id="homePage"&gt;&lt;a class="alignleft" href="home.html"&gt;Home&lt;/a&gt;&lt;a class="alignright" href="logout_action.php"&gt;Logout&lt;/a&gt;&lt;a class="alignright" href="configure_action.html"&gt;Configure&lt;/a&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;center&gt;&lt;h3&gt;&lt;?=$user?&gt; Home Page&lt;/h3&gt;&lt;table id="deviceTable" border="1"&gt;&lt;tr&gt;&lt;th&gt;Device&lt;/th&gt;&lt;th&gt;Alias&lt;/th&gt;&lt;th&gt;Serial Number&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Delete&lt;/th&gt;&lt;/tr&gt;&lt;?=$data?&gt;
+&lt;/table&gt;&lt;div style="display:inline;"&gt;&lt;form name="addDeviceform" action="device_add_action.php"&gt;  &lt;input type="text" id="ioeSerialText" style="display:none;"&gt;  &lt;input type="button" value="Add new device" onClick="addDevice();" style="display:inline;"&gt;&lt;/form&gt;&lt;form name="removeDeviceform" action="device_delete_action.php"&gt;  &lt;input type="text" id="ioeDeleteText" style="display:none;"&gt;  &lt;input type="button" value="Remove devices" onClick="removeDevices();" style="display:inline;"&gt;&lt;/form&gt;&lt;form name="submitDeviceform" action="device_update_action.php"&gt;  &lt;input type="text" id="ioeUpdateText" style="display:none;"&gt;  &lt;input type="button" value="Submit" onClick="updateDevices();" style="display:inline;"&gt;&lt;/form&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>index.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;script&gt;
+window.location="index.php"
+&lt;/script&gt;
+&lt;/html&gt;
+</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>index.php</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function validateLogin()
+{
+  if (document.forms["login"]["userid"].value.length == 0)
+  {
+    alert("Please enter the userid.");
+    return false;
+  }
+  else if (document.forms["login"]["pw"].value.length == 0)
+  {
+    alert("Please enter the password.");
+    return false;
+  }
+  else
+  {
+    CHttpFormExtractor.submitIoeLogin();
+    return true;
+  }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h3&gt;Registration Server Login&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;form name="login" method="post" action="login_action.php" onsubmit="return validateLogin()"&gt;
+Username: &lt;input type="text" name="userid" id="userid" value="" size="20"&gt;&lt;br&gt;
+Password: &lt;input type="password" name="pw" id="pw" value="" size="20"&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;input type="submit" name="submit" value="Sign In"&gt;
+&lt;/center&gt;
+&lt;/form&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;span&gt;Don't have an IoE account?&lt;/span&gt;&lt;a id="idA_SignUp" class="TextSemiBold" href="create_account.html"&gt;Sign up now&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>5</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>tftp:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>asa842-k8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CASAFileContent">
+                        <DEVICE_TYPE>ASA</DEVICE_TYPE>
+                        <SET_NAME>5505_8.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>c1841-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>c1841-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>c1841-ipbasek9-mz.124-12.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>c2600-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>6</FILE_NUMBER>
+                      <NAME>c2600-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>7</FILE_NUMBER>
+                      <NAME>c2600-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>8</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>9</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.151-4.M4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_15.1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>10</FILE_NUMBER>
+                      <NAME>c2800nm-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>11</FILE_NUMBER>
+                      <NAME>c2800nm-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>12</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>13</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA8</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>14</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.FX.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_FX</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>15</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.SEE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_SEE1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>16</FILE_NUMBER>
+                      <NAME>c2960-lanbasek9-mz.150-2.SE4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_15.0_SE4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>17</FILE_NUMBER>
+                      <NAME>c3560-advipservicesk9-mz.122-37.SE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>MultiLayerSwitch</DEVICE_TYPE>
+                        <SET_NAME>3560_advip_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>18</FILE_NUMBER>
+                      <NAME>pt1000-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>pt_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>19</FILE_NUMBER>
+                      <NAME>pt3000-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>pt_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>19</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+              </FILES>
+            </FILE>
+          </FILE_MANAGER>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <TRAFFICGEN_USER_TRAFFIC />
+          <TERMINAL_SETTINGS>
+            <BITS>9600</BITS>
+            <DATA_BITS>8</DATA_BITS>
+            <PARITY>2</PARITY>
+            <STOP_BITS>1</STOP_BITS>
+            <FLOW_CONTROL>0</FLOW_CONTROL>
+          </TERMINAL_SETTINGS>
+          <LOCK_SETTINGS>
+            <DLOCK>1</DLOCK>
+            <LOCK>0</LOCK>
+            <PASSWD />
+          </LOCK_SETTINGS>
+          <HTML_TAB>
+            <HTML_CODE />
+          </HTML_TAB>
+          <GUI_TAB>
+            <GUI_CODE />
+          </GUI_TAB>
+          <IMAGE_SETTINGS>
+            <CUSTOM_PHYSICAL />
+          </IMAGE_SETTINGS>
+          <FILE_MANAGER>
+            <FILE class="CDirectory">
+              <FILE_NUMBER>0</FILE_NUMBER>
+              <NAME />
+              <DATE_TIME>0</DATE_TIME>
+              <PERMISSION>6</PERMISSION>
+              <FILE_CONTENT />
+              <FILES>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>Desktop:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>WRT300N-v1.03.6_fw,0.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CLinksysFirmwareUpgPage">
+                        <TEXT>Linkys firmware1</TEXT>
+                        <Firmware_Version>v1.03.6</Firmware_Version>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>WRT300N-v1.1_1.51.2_fw,0.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CLinksysFirmwareUpgPage">
+                        <TEXT>Linkys firmware2</TEXT>
+                        <Firmware_Version>v1.1_1.51.2</Firmware_Version>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>2</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>c:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>sampleFile.txt</NAME>
+                      <DATE_TIME>4294967295</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CTextFileContent">
+                        <TEXT>This is a sample text file</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>1</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>ftp:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>asa842-k8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CASAFileContent">
+                        <DEVICE_TYPE>ASA</DEVICE_TYPE>
+                        <SET_NAME>5505_8.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>c1841-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>c1841-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>c1841-ipbasek9-mz.124-12.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>c2600-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>6</FILE_NUMBER>
+                      <NAME>c2600-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>7</FILE_NUMBER>
+                      <NAME>c2600-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>8</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>9</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.151-4.M4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_15.1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>10</FILE_NUMBER>
+                      <NAME>c2800nm-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>11</FILE_NUMBER>
+                      <NAME>c2800nm-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>12</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>13</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA8</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>14</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.FX.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_FX</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>15</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.SEE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_SEE1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>16</FILE_NUMBER>
+                      <NAME>c2960-lanbasek9-mz.150-2.SE4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_15.0_SE4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>17</FILE_NUMBER>
+                      <NAME>c3560-advipservicesk9-mz.122-37.SE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>MultiLayerSwitch</DEVICE_TYPE>
+                        <SET_NAME>3560_advip_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>18</FILE_NUMBER>
+                      <NAME>pt1000-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>pt_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>19</FILE_NUMBER>
+                      <NAME>pt3000-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>pt_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>19</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>http:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>copyrights.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;pre&gt;
+Cisco Packet Tracer Academy License Agreement
+
+You must agree to the following terms and conditions "User Agreement" that define proper use of this software. 
+
+The Academy acknowledges and agrees that Cisco Packet Tracer is provided by Cisco to the Academy and the Academy will not, or allow anyone else to, distribute the software to any third party not associated with the Networking Academy Program, including, without limitation, any competitors of Cisco.  Academies may distribute one copy of Cisco Packet Tracer to each Academy student, provided, however, the Academy uses reasonable efforts not to distribute to any student whom the Academy has a reason to know or the student has disclosed to Academy that the student cannot adhere to the terms and conditions set forth herein. Academy distribution of Cisco Packet Tracer to students shall include all copyright, trademarks, or other proprietary notices and be limited to either: a) posting on Academy's Local Area Network Server with password-protected access, or b) posting to a password-protected Academy FTP site. 
+
+I.    PROPRIETARY RIGHTS AND LICENSING
+
+Cisco hereby grants Academy a nonexclusive, nontransferable license to use Cisco Packet Tracer solely for providing instructional practice to students in accordance with the terms and conditions set forth herein. The Academy shall not make any copies or duplicates of Cisco Packet Tracer except to distribute directly to Academy students. The Academy may not sublicense to any person its rights to distribute Cisco Packet Tracer but may allow students to use Cisco Packet Tracer. 
+Cisco retains all title to, and, except as expressly licensed herein, all rights to Cisco Packet Tracer, all copies thereof and all related documentation and materials, and all of Cisco's Marks or any other designations. Any invoices of Cisco purporting to cover such items do not convey title to, or patent rights, copyrights, or any other proprietary interest in, such items to the Academy. 
+Academy agrees, except as otherwise expressly authorized hereunder, not to (i) make any copies, duplicates or derivative works of Cisco Packet Tracer for profit (ii) remove, conceal, alter, or cover any product identification or notices of any proprietary or copyright restrictions from Cisco Packet Tracer. 
+II.                GUIDELINES FOR AVOIDING INFRINGEMENT
+
+Activities to Avoid-The following list describes a few of the specific scenarios to help avoid infringing any Cisco copyright or trademark rights:
+
+-      Do not copy, reproduce, download, sell, or distribute, directly or indirectly, any Cisco copyrighted materials including Cisco Packet Tracer to a third party. 
+
+-      Do not post Cisco Packet Tracer on publicly accessible web sites, ftp sites or online message boards. 
+
+ 
+
+Cisco Packet Tracer End User License Agreement
+
+IMPORTANT: PLEASE READ THIS SOFTWARE LICENSE AGREEMENT CAREFULLY. DOWNLOADING, INSTALLING OR USING THE Cisco Packet Tracer SOFTWARE CONSTITUTES ACCEPTANCE OF THIS AGREEMENT.
+
+CISCO IS WILLING TO LICENSE THE SOFTWARE TO YOU ONLY UPON THE CONDITION THAT YOU ACCEPT ALL OF THE TERMS CONTAINED IN THIS LICENSE AGREEMENT. BY DOWNLOADING OR INSTALLING THE SOFTWARE, OR USING THE EQUIPMENT THAT CONTAINS THIS SOFTWARE, YOU ARE BINDING YOURSELF AND THE BUSINESS OR EDUCATIONAL ENTITY THAT YOU REPRESENT (COLLECTIVELY, "User") TO THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, THEN CISCO IS UNWILLING TO LICENSE THE SOFTWARE TO YOU AND YOU ARE NOT AUTHORIZED TO DOWNLOAD, INSTALL OR USE THE SOFTWARE. 
+
+The following terms of this Software License Agreement ("Agreement") govern Users access and use of the Software, except to the extent there is a separate signed agreement between User and Cisco governing Users use of the Software. To the extent of a conflict between the provisions of the foregoing documents, the order of precedence shall be (1) the signed agreement and (2) this Software License Agreement.
+
+License. Conditioned upon compliance with the terms and conditions of this Agreement, Cisco Systems, Inc. ("Cisco") grants to User a royalty-free, nonexclusive, and nontransferable license to use the Software and Documentation solely to create configuration simulations for classroom use in teaching students participating in the Cisco Networking Academy program. "Documentation" means written information (whether contained in user or technical manuals, training materials, specifications or otherwise) specifically pertaining to the Software and made available by Cisco with the Software in any manner (including on CD-Rom, or on-line). 
+
+General Limitations. This is a license, not a transfer of title, to the Software and Documentation, and Cisco retains ownership of all copies of the Software and Documentation. User acknowledges that the Software and Documentation contain trade secrets of Cisco, its suppliers or licensors, including but not limited to the specific internal design and structure of individual programs and associated interface information. Accordingly, except as otherwise expressly provided under this Agreement, User shall have no right, and User specifically agrees not to:
+
+(i) transfer, assign or sublicense its license rights to any other person or entity, or use the Software on unauthorized or secondhand Cisco equipment, and User acknowledges that any attempted transfer, assignment, sublicense or use shall be void;
+
+(ii) make error corrections to or otherwise modify or adapt the Software or create derivative works based upon the Software, or permit third parties to do the same;
+
+(iii) reverse engineer or decompile, decrypt, disassemble or otherwise reduce the Software to human-readable form, except to the extent otherwise expressly permitted under applicable law notwithstanding this restriction;
+
+(iv) use or permit the Software to be used to perform services for third parties, whether on a service bureau or time sharing basis or otherwise, without the express written authorization of Cisco; or
+
+(vi) disclose, provide, or otherwise make available trade secrets contained within the Software and Documentation in any form to any third party without the prior written consent of Cisco. User shall implement reasonable security measures to protect such trade secrets.
+
+To the extent required by law, and at User's written request, Cisco shall provide User with the interface information needed to achieve interoperability between the Software and another independently created program, on payment of Cisco's applicable fee, if any. User shall observe strict obligations of confidentiality with respect to such information and shall use such information in compliance with any applicable terms and conditions upon which Cisco makes such information available. 
+
+Software, Upgrades and Additional Copies. For purposes of this Agreement, "Software" shall include (and the terms and conditions of this Agreement shall apply to) computer programs, as provided to User by Cisco or an authorized Cisco representative, and any upgrades, updates, bug fixes or modified versions thereto (collectively, "Upgrades") or backup copies of the Software licensed or provided to User by Cisco or an authorized Cisco reseller. NOTWITHSTANDING ANY OTHER PROVISION OF THIS AGREEMENT: (1) User HAS NO LICENSE OR RIGHT TO USE ANY ADDITIONAL COPIES OR UPGRADES UNLESS User, AT THE TIME OF ACQUIRING SUCH COPY OR UPGRADE, ALREADY HOLDS A VALID LICENSE TO THE ORIGINAL SOFTWARE; AND (2) THE MAKING AND USE OF ADDITIONAL COPIES IS LIMITED TO NECESSARY BACKUP PURPOSES ONLY. 
+
+Proprietary Notices. User agrees to maintain and reproduce all copyright and other proprietary notices on all copies, in any form, of the Software in the same form and manner that such copyright and other proprietary notices are included on the Software. Except as expressly authorized in this Agreement, User shall not make any copies or duplicates of any Software without the prior written permission of Cisco.
+
+Term and Termination. This Agreement and the license granted herein shall remain effective until terminated. User may terminate this Agreement and the license at any time by destroying all copies of Software and any Documentation. User's rights under this Agreement will terminate immediately without notice from Cisco if User fails to comply with any provision of this Agreement. Upon termination, User shall destroy all copies of Software and Documentation in its possession or control. All confidentiality obligations of User and all limitations of liability and disclaimers and restrictions of warranty shall survive termination of this Agreement. In addition, the provisions of the sections titled "U.S. Government End User Purchasers" and "General Terms Applicable to the Limited Warranty Statement and Software License" shall survive termination of this Agreement. 
+
+Export. Software and Documentation, including technical data, may be subject to U.S. export control laws, including the U.S. Export Administration Act and its associated regulations, and may be subject to export or import regulations in other countries. User agrees to comply strictly with all such regulations and acknowledges that it has the responsibility to obtain licenses to export, re-export, or import Software and Documentation.
+
+U.S. Government End User Purchasers. The Software and Documentation qualify as "commercial items," as that term is defined at Federal Acquisition Regulation ("FAR") (48 C.F.R.) 2.101, consisting of "commercial computer software" and "commercial computer software documentation" as such terms are used in FAR 12.212. Consistent with FAR 12.212 and DoD FAR Supp. 227.7202-1 through 227.7202-4, and notwithstanding any other FAR or other contractual clause to the contrary in any agreement into which this Software License Agreement may be incorporated, User may provide to Government end user or, if this Agreement is direct, Government end user will acquire, the Software and Documentation with only those rights set forth in this Software License Agreement. Use of either the Software or Documentation or both constitutes agreement by the Government that the Software and Documentation are "commercial computer software" and "commercial computer software documentation," and constitutes acceptance of the rights and restrictions herein. 
+
+No Warranty
+THE SOFTWARE FURNISHED UNDER THIS AGREEMENT IS PROVIDED ON AN "AS IS" BASIS, WITHOUT ANY WARRANTIES OR REPRESENTATIONS EXPRESS, IMPLIED OR STATUTORY; INCLUDING, WITHOUT LIMITATION, WARRANTIES OF QUALITY, PERFORMANCE, NONINFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. NOR ARE THERE ANY WARRANTIES CREATED BY A COURSE OF DEALING, COURSE OF PERFORMANCE OR TRADE USAGE. DEVELOPER DOES NOT WARRANT THAT THE SOFTWARE WILL MEET USER'S NEEDS OR BE FREE FROM ERRORS, OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED. THE FOREGOING EXCLUSIONS AND DISCLAIMERS ARE AN ESSENTIAL PART OF THIS AGREEMENT AND FORMED THE BASIS FOR DETERMINING THE FEES CHARGED FOR THE SOFTWARE. 
+
+General Terms Applicable to the No Warranty Statement and Software License
+
+Disclaimer of Liabilities. REGARDLESS WHETHER ANY REMEDY SET FORTH HEREIN FAILS OF ITS ESSENTIAL PURPOSE OR OTHERWISE, IN NO EVENT WILL CISCO OR ITS SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, PROFIT, OR LOST OR DAMAGED DATA, BUSINESS INTERRUPTION, LOSS OF CAPITAL, OR FOR SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL, OR PUNITIVE DAMAGES HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY OR WHETHER ARISING OUT OF THE USE OF OR INABILITY TO USE SOFTWARE OR OTHERWISE AND EVEN IF CISCO OR ITS SUPPLIERS OR LICENSORS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. In no event shall Cisco's or its suppliers' or licensors' liability to User, whether in contract, tort (including negligence), breach of warranty, or otherwise, exceed the price paid by User for the Software that gave rise to the claim or if the Software is part of another Product, the price paid for such other Product. BECAUSE SOME STATES OR JURISDICTIONS DO NOT ALLOW LIMITATION OR EXCLUSION OF CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+
+User agrees that the limitations of liability and disclaimers set forth herein will apply regardless of whether User has accepted the Software or any other product or service delivered by Cisco. User acknowledges and agrees that Cisco has set its prices and entered into this Agreement in reliance upon the disclaimers of warranty and the limitations of liability set forth herein, that the same reflect an allocation of risk between the parties (including the risk that a contract remedy may fail of its essential purpose and cause consequential loss), and that the same form an essential basis of the bargain between the parties. 
+
+The Warranty and the Software License shall be governed by and construed in accordance with the laws of the State of California, without reference to or application of choice of law rules or principles. The United Nations Convention on the International Sale of Goods shall not apply. If any portion hereof is found to be void or unenforceable, the remaining provisions of the Agreement shall remain in full force and effect. Except as expressly provided herein, this Agreement constitutes the entire agreement between the parties with respect to the license of the Software and Documentation and supersedes any conflicting or additional terms contained in any purchase order or elsewhere, all of which terms are excluded. This Agreement has been written in the English language, and the parties agree that the English version will govern. User waives any rights User may have under the law of User's country or province to have this Agreement written in any language other than English. 
+
+ 
+
+Cisco, Cisco Systems, and the Cisco Systems logo are registered trademarks of Cisco Systems, Inc. in the U.S. and certain other countries.  All other trademarks mentioned in this document are the property of their respective owners. 
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>cscoptlogo177x111.jpg</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>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</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>helloworld.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+Hello, world!
+&lt;br&gt;&lt;a href='index.html'&gt;Back&lt;/a&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>image.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;body&gt;
+&lt;center&gt;&lt;font size='+2' color='blue'&gt;Image of Cisco Logo&lt;/font&gt;&lt;/center&gt;
+&lt;p&gt;This is an image of Cisco Logo&lt;/p&gt;
+&lt;p&gt;&lt;a href='cscoptlogo177x111.jpg'&gt;&lt;img src="/cscoptlogo177x111.jpg"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;&lt;a href='index.html'&gt;Back&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>index.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;center&gt;&lt;font size='+2' color='blue'&gt;Cisco Packet Tracer&lt;/font&gt;&lt;/center&gt;
+&lt;hr&gt;Welcome to Cisco Packet Tracer. Opening doors to new opportunities. Mind Wide Open.
+&lt;p&gt;Quick Links:
+&lt;br&gt;&lt;a href='helloworld.html'&gt;A small page&lt;/a&gt;
+&lt;br&gt;&lt;a href='copyrights.html'&gt;Copyrights&lt;/a&gt;
+&lt;br&gt;&lt;a href='image.html'&gt;Image page&lt;/a&gt;
+&lt;br&gt;&lt;a href='cscoptlogo177x111.jpg'&gt;Image&lt;/a&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>5</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>ioe:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>configure_action.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;&lt;head&gt;&lt;style type="text/css"&gt;.alignleft { float: left;}.alignright { float: right; margin-right: 3px;}&lt;/style&gt;&lt;script&gt;function addCondition() {  var div = document.getElementById("configHomePage");  div.style.display = "none";  div = document.getElementById("configPage");  div.style.display = "block";  document.getElementById("configDescText").value="";  document.getElementById("configDescText").focus();  document.getElementById("configCondText").value="";  document.getElementById("configActionText").value="";  document.getElementById("syntaxError").style.display = "none";}function removeHref(input) {  var description = input.replace("&lt;a href=\"javascript:void(0)\"&gt;", "").replace("&lt;/a&gt;", "");  var temp = document.createElement('div');  temp.innerHTML = description;  return temp.childNodes[0].nodeValue;}function updateCondition(rowIndex) {  var div = document.getElementById("configHomePage");  div.style.display = "none";  div = document.getElementById("configPage");  div.style.display = "block";  var condTable = document.getElementById("condTable");  document.getElementById("configDescText").value = removeHref(condTable.rows[rowIndex].cells[0].innerHTML);  document.getElementById("configCondText").value = condTable.rows[rowIndex].cells[1].childNodes[0].nodeValue;  document.getElementById("configCondText").focus();  document.getElementById("configActionText").value = condTable.rows[rowIndex].cells[2].childNodes[0].nodeValue;  document.getElementById("syntaxError").style.display = "none";}function toDone() {  CHttpFormExtractor.validateIoeCondition();}function cancelAddCondition() {  var div = document.getElementById("configPage");  div.style.display = "none";  div = document.getElementById("configHomePage");  div.style.display = "block";} function deleteConditions() {  var condTable = document.getElementById("condTable");  var checkedCnt = 0;  var deleteCondString = "";  for (var i=1;i&lt;condTable.rows.length; i++) {    if (condTable.rows[i].cells[3].children[0].checked) {      deleteCondString += "&lt;deleteCondition&gt;" + condTable.rows[i].cells[0].innerHTML;      checkedCnt++;    }  }  if (checkedCnt &gt; 0) {    document.getElementById("ioeDeleteText").value = deleteCondString;    CHttpFormExtractor.submitRemoveConditions();    document.forms["removeConditions"].submit();  }}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;&lt;a class="alignleft" href="home.html"&gt;Home&lt;/a&gt;  &lt;a class="alignright" href="logout_action.php"&gt;Logout&lt;/a&gt;  &lt;a class="alignright" href="configure_action.html"&gt;Configure&lt;/a&gt;&lt;/div&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;div style="display:&lt;?=$showHomePage?&gt;; text-align:center;" id="configHomePage"&gt;&lt;center&gt;&lt;h3&gt;Configuration Page&lt;/h3&gt;  &lt;table id="condTable" border="1"&gt;    &lt;tr&gt;      &lt;th&gt;Description&lt;/th&gt;      &lt;th&gt;Condition&lt;/th&gt;      &lt;th&gt;Action&lt;/th&gt;      &lt;th&gt;Delete&lt;/th&gt;    &lt;/tr&gt;&lt;?=$data?&gt;
+  &lt;/table&gt;  &lt;form name="addNewConidtion" action="condition_add_action.php" style="display: inline;"&gt;    &lt;input type=button value="Add" onClick="addCondition();"&gt;  &lt;/form&gt;  &lt;form name="removeConditions" action="condition_delete_action.php" style="display: inline;"&gt;    &lt;input type="text" id="ioeDeleteText" style="display:none;"&gt;    &lt;input type=button value="Remove" onClick="deleteConditions();"&gt;  &lt;/form&gt;&lt;/center&gt;&lt;/div&gt;&lt;div style="display:&lt;?=$showConfigPage?&gt;; text-align:center;" id="configPage"&gt;&lt;center&gt;&lt;h3&gt;Configuration Page&lt;/h3&gt;  &lt;table id="configTable" border="1"&gt;    &lt;tr&gt;      &lt;td&gt;Description&lt;/td&gt;      &lt;td style="width:100%;"&gt;&lt;textarea id="configDescText" rows="1" style="width:100%; height:100%; border:none;"&gt;&lt;?=$descText?&gt;&lt;/textarea&gt;&lt;/td&gt;    &lt;/tr&gt;    &lt;tr&gt;      &lt;td&gt;Condition&lt;/td&gt;      &lt;td style="width:100%;"&gt;&lt;textarea id="configCondText" rows="1" style="width:100%; height:100%; border:none;"&gt;&lt;?=$conditionText?&gt;&lt;/textarea&gt;&lt;/td&gt;    &lt;/tr&gt;    &lt;tr&gt;      &lt;td&gt;Action&lt;/td&gt;      &lt;td style="width:100%;"&gt;&lt;textarea id="configActionText" rows="5" style="width:100%; height:100%; border:none;"&gt;&lt;?=$actionText?&gt;&lt;/textarea&gt;&lt;/td&gt;    &lt;/tr&gt;  &lt;/table&gt;  &lt;div id="syntaxError" style="display:&lt;?=$syntaxDisplay?&gt;;"&gt;    &lt;?=$syntaxError?&gt;&lt;br&gt;  &lt;/div&gt;  &lt;form name="addNewConidtion" action="condition_add_action.php"&gt;    &lt;button type="submit" onClick="toDone();"&gt;Submit&lt;/button&gt;    &lt;button type="reset" onClick="cancelAddCondition();"&gt;Cancel&lt;/button&gt;  &lt;/form&gt;&lt;/center&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>create_account.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function validateAccount()
+{
+  if (document.forms["createAccount"]["userid"].value.length == 0)
+  {
+    alert("Please enter the userid.");
+    return false;
+  }
+  else if (document.forms["createAccount"]["pw"].value.length == 0)
+  {
+    alert("Please enter the password.");
+    return false;
+  }
+  else
+  {
+    CHttpFormExtractor.submitIoeLogin();
+    return true;
+  }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h3&gt;Registration Server Account Creation&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;form name="createAccount" method="post" action="account_action.php" onsubmit="return validateAccount()"&gt;
+Username: &lt;input type="text" name="userid" id="userid" value="" size="20"&gt;&lt;br&gt;
+Password: &lt;input type="password" name="pw" id="pw" value="" size="20"&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;input type="submit" name="submit" value="Create"&gt;
+&lt;/center&gt;
+&lt;/form&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>home.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;&lt;head&gt;&lt;script&gt;function addDevice() {  var device = prompt("Please enter device serial number","");  if (device != null) {    document.getElementById("ioeSerialText").value = device;    CHttpFormExtractor.submitAddNewDevice();    document.forms["addDeviceform"].submit();  }}function removeDevices() {  var deviceTable = document.getElementById("deviceTable");  var url = document.forms["removeDeviceform"].action;  var checkedCnt = 0;  var deleteDeviceString = "";  for (var i=1;i&lt;deviceTable.rows.length; i++) {    if (deviceTable.rows[i].cells[5].children[0].checked) {      deleteDeviceString += "&lt;deleteDevice&gt;" + deviceTable.rows[i].cells[2].innerHTML;      checkedCnt++;    }  }  if (checkedCnt &gt; 0) {    document.getElementById("ioeDeleteText").value = deleteDeviceString;    CHttpFormExtractor.submitRemoveDevices();    document.forms["removeDeviceform"].submit();  }}function updateDevices() {  var deviceTable = document.getElementById("deviceTable");  var url = document.forms["submitDeviceform"].action;  var checkedCnt = 0;  var updateDeviceString = "";  for (var i=1;i&lt;deviceTable.rows.length; i++) {    var deviceAlias = deviceTable.rows[i].cells[1].children[0].value;    if (deviceAlias != 'Enter alias here') {      updateDeviceString += "&lt;updateDevice&gt;" + deviceTable.rows[i].cells[2].innerHTML + "&lt;alias&gt;" + deviceAlias;      checkedCnt++;    }  }  if (checkedCnt &gt; 0) {    document.getElementById("ioeUpdateText").value = updateDeviceString;    CHttpFormExtractor.submitUpdateDevices();    document.forms["submitDeviceform"].submit();  }}function showWarning() {  document.getElementById("warningMsg").style.display = "block";  document.getElementById("overlay").style.display = "block";}function closeWarning() {  document.getElementById("warningMsg").style.display = "none";  document.getElementById("overlay").style.display = "none";}function aliasOnFocus(aliasElement) {  if (aliasElement.value == 'Enter alias here') {    aliasElement.value = '';  }}function aliasOnBlur(aliasElement) {  if (aliasElement.value == '') {    aliasElement.value = 'Enter alias here';  }}&lt;/script&gt;&lt;style type="text/css"&gt;div#warningMsg { display: &lt;?=$display?&gt;; position: relative; z-index: 3; margin: 150px auto 0px auto; width: 150px;  height: 100px; background: #FFF; color: #000; }
+div#overlay { display: &lt;?=$display?&gt;; z-index: 2; background: #000; position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; opacity: 0.7; }
+div#homePage { position:absolute; margin-left: auto; margin-right: auto; left: 0px; right: 0px; top: 0px;}
+.alignleft {float: left;}
+.alignright {float: right; margin-right: 3px;}
+table {border: none; border-collapse: collapse; width: 90%; background-color: #464646; border-radius: 10px; box-shadow: 4px 3px 10px 5px;}
+th {padding: 1%; padding-left: 5px; padding-right: 5px; color: white; background-color: #464646; border-radius: 10px;}
+td {text-align: center; padding: 1%;}
+div { margin: 1em;}
+form {display: inline;}
+.evenCell {background-color: #6E6D6D;}
+.oddCell {background-color: #A2A0A0;}
+input[type=button] {width:25%;}
+a {font-size: .8em;}
+h3 {font-size: 1.5em;}
+#homePageLink {padding-left: 10%;}
+#configureLink {padding-right: 2%;}
+#logoutLink {padding-right: 10%;}
+.aliasEdit {background-color: inherit; border:none; text-align: center;}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div id="overlay"&gt;&lt;/div&gt; &lt;div id="warningMsg"&gt; &lt;center&gt;&lt;p&gt;Operation failed&lt;/p&gt; &lt;button onmousedown="closeWarning()"&gt;Close&lt;/button&gt;&lt;/center&gt;&lt;/div&gt;&lt;div id="homePage"&gt;&lt;a class="alignleft" href="home.html"&gt;Home&lt;/a&gt;&lt;a class="alignright" href="logout_action.php"&gt;Logout&lt;/a&gt;&lt;a class="alignright" href="configure_action.html"&gt;Configure&lt;/a&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;center&gt;&lt;h3&gt;&lt;?=$user?&gt; Home Page&lt;/h3&gt;&lt;table id="deviceTable" border="1"&gt;&lt;tr&gt;&lt;th&gt;Device&lt;/th&gt;&lt;th&gt;Alias&lt;/th&gt;&lt;th&gt;Serial Number&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Delete&lt;/th&gt;&lt;/tr&gt;&lt;?=$data?&gt;
+&lt;/table&gt;&lt;div style="display:inline;"&gt;&lt;form name="addDeviceform" action="device_add_action.php"&gt;  &lt;input type="text" id="ioeSerialText" style="display:none;"&gt;  &lt;input type="button" value="Add new device" onClick="addDevice();" style="display:inline;"&gt;&lt;/form&gt;&lt;form name="removeDeviceform" action="device_delete_action.php"&gt;  &lt;input type="text" id="ioeDeleteText" style="display:none;"&gt;  &lt;input type="button" value="Remove devices" onClick="removeDevices();" style="display:inline;"&gt;&lt;/form&gt;&lt;form name="submitDeviceform" action="device_update_action.php"&gt;  &lt;input type="text" id="ioeUpdateText" style="display:none;"&gt;  &lt;input type="button" value="Submit" onClick="updateDevices();" style="display:inline;"&gt;&lt;/form&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>index.html</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;script&gt;
+window.location="index.php"
+&lt;/script&gt;
+&lt;/html&gt;
+</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>index.php</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CHttpPage">
+                        <TEXT>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function validateLogin()
+{
+  if (document.forms["login"]["userid"].value.length == 0)
+  {
+    alert("Please enter the userid.");
+    return false;
+  }
+  else if (document.forms["login"]["pw"].value.length == 0)
+  {
+    alert("Please enter the password.");
+    return false;
+  }
+  else
+  {
+    CHttpFormExtractor.submitIoeLogin();
+    return true;
+  }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h3&gt;Registration Server Login&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;form name="login" method="post" action="login_action.php" onsubmit="return validateLogin()"&gt;
+Username: &lt;input type="text" name="userid" id="userid" value="" size="20"&gt;&lt;br&gt;
+Password: &lt;input type="password" name="pw" id="pw" value="" size="20"&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;input type="submit" name="submit" value="Sign In"&gt;
+&lt;/center&gt;
+&lt;/form&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;span&gt;Don't have an IoE account?&lt;/span&gt;&lt;a id="idA_SignUp" class="TextSemiBold" href="create_account.html"&gt;Sign up now&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>5</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>tftp:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>asa842-k8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CASAFileContent">
+                        <DEVICE_TYPE>ASA</DEVICE_TYPE>
+                        <SET_NAME>5505_8.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>c1841-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>c1841-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>4</FILE_NUMBER>
+                      <NAME>c1841-ipbasek9-mz.124-12.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>1841_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>5</FILE_NUMBER>
+                      <NAME>c2600-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>6</FILE_NUMBER>
+                      <NAME>c2600-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>7</FILE_NUMBER>
+                      <NAME>c2600-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2600_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>8</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.124-15.T1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>9</FILE_NUMBER>
+                      <NAME>c2800nm-advipservicesk9-mz.151-4.M4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_advip_15.1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>10</FILE_NUMBER>
+                      <NAME>c2800nm-ipbase-mz.123-14.T7.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.3</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>11</FILE_NUMBER>
+                      <NAME>c2800nm-ipbasek9-mz.124-8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>2800_12.4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>12</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>13</FILE_NUMBER>
+                      <NAME>c2950-i6q4l2-mz.121-22.EA8.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2950_12.1_EA8</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>14</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.FX.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_FX</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>15</FILE_NUMBER>
+                      <NAME>c2960-lanbase-mz.122-25.SEE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_12.2_SEE1</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>16</FILE_NUMBER>
+                      <NAME>c2960-lanbasek9-mz.150-2.SE4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>2960_15.0_SE4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>17</FILE_NUMBER>
+                      <NAME>c3560-advipservicesk9-mz.122-37.SE1.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>MultiLayerSwitch</DEVICE_TYPE>
+                        <SET_NAME>3560_advip_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>18</FILE_NUMBER>
+                      <NAME>pt1000-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>pt_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>19</FILE_NUMBER>
+                      <NAME>pt3000-i6q4l2-mz.121-22.EA4.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Switch</DEVICE_TYPE>
+                        <SET_NAME>pt_12.1_EA4</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>19</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+              </FILES>
+            </FILE>
+          </FILE_MANAGER>
+          <HTTP_SERVER>
+            <ENABLED>1</ENABLED>
+            <USERNAME />
+            <PASSWORD />
+          </HTTP_SERVER>
+          <HTTPS_SERVER>
+            <HTTPSENABLED>1</HTTPSENABLED>
+          </HTTPS_SERVER>
+          <DNS_SERVER>
+            <ENABLED>0</ENABLED>
+            <NAMESERVER-DATABASE />
+          </DNS_SERVER>
+          <NF_COLLECTOR>
+            <ENABLED>0</ENABLED>
+          </NF_COLLECTOR>
+          <DHCP_SERVERS>
+            <ASSOCIATED_PORTS>
+              <ASSOCIATED_PORT>
+                <NAME>FastEthernet0</NAME>
+                <DHCP_SERVER>
+                  <ENABLED>0</ENABLED>
+                  <POOLS>
+                    <POOL>
+                      <NAME>serverPool</NAME>
+                      <NETWORK>0.0.0.0</NETWORK>
+                      <MASK>0.0.0.0</MASK>
+                      <DEFAULT_ROUTER>0.0.0.0</DEFAULT_ROUTER>
+                      <TFTP_ADDRESS>0.0.0.0</TFTP_ADDRESS>
+                      <START_IP>0.0.0.0</START_IP>
+                      <END_IP>0.0.2.0</END_IP>
+                      <DNS_SERVER>0.0.0.0</DNS_SERVER>
+                      <MAX_USERS>512</MAX_USERS>
+                      <DOMAIN_NAME />
+                      <DHCP_POOL_LEASES />
+                    </POOL>
+                  </POOLS>
+                  <DHCP_RESERVATIONS />
+                  <AUTOCONFIG />
+                </DHCP_SERVER>
+              </ASSOCIATED_PORT>
+            </ASSOCIATED_PORTS>
+          </DHCP_SERVERS>
+          <DHCPV6_SERVER_LIST>
+            <ASSOCIATED_PORTS />
+            <DHCPv6_POOLS />
+            <IPv6_LOCAL_POOLS />
+          </DHCPV6_SERVER_LIST>
+          <TFTP_SERVER>
+            <ENABLED>1</ENABLED>
+          </TFTP_SERVER>
+          <FTP_SERVER>
+            <ENABLED>1</ENABLED>
+            <USER_ACCOUNT_MNGR>
+              <ACCOUNT>
+                <USERNAME>cisco</USERNAME>
+                <PASSWORD>cisco</PASSWORD>
+                <PERMISSIONS>RWDNL</PERMISSIONS>
+              </ACCOUNT>
+            </USER_ACCOUNT_MNGR>
+          </FTP_SERVER>
+          <NTP_SERVER>
+            <ENABLED>1</ENABLED>
+            <ENABLED_SERVER_AUTHENTICATE>0</ENABLED_SERVER_AUTHENTICATE>
+            <KEY>0</KEY>
+            <MD5PASSWORD />
+          </NTP_SERVER>
+          <SYSLOG_SERVER>
+            <ENABLED>1</ENABLED>
+          </SYSLOG_SERVER>
+          <ACS_SERVER>
+            <ENABLED>0</ENABLED>
+            <USERS />
+            <ACS_CLIENTS />
+            <RADIUS_SETTINGS>
+              <AUTH_PORT>1645</AUTH_PORT>
+            </RADIUS_SETTINGS>
+          </ACS_SERVER>
+          <EMAIL_SERVER>
+            <SMTP_ENABLED>1</SMTP_ENABLED>
+            <SMTP_DOMAIN />
+            <POP3_ENABLED>1</POP3_ENABLED>
+            <FORWARD_MAIL>0</FORWARD_MAIL>
+            <NO_OF_USERS>0</NO_OF_USERS>
+          </EMAIL_SERVER>
+          <IOE_USER_MANAGER>
+            <USERS />
+          </IOE_USER_MANAGER>
+          <REGISTRATION_SEVER>false</REGISTRATION_SEVER>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>300.5</X>
+            <Y>537</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>200006936</MEM_ADDR>
+            <DEV_ADDR>200127560</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Wiring Closet,Rack,Server0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

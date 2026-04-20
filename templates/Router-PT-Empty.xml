@@ -1,0 +1,215 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Router-PT-Empty">Router</TYPE>
+          <NAME translate="true">Router9</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRouterModule</TYPE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.54</X_COORD>
+            <Y_COORD>1918.54</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810PM32</SERIALNUMBER>
+          <SYS_NAME>Router</SYS_NAME>
+          <RUNNINGCONFIG>
+            <LINE>!</LINE>
+            <LINE>version 12.2</LINE>
+            <LINE>no service timestamps log datetime msec</LINE>
+            <LINE>no service timestamps debug datetime msec</LINE>
+            <LINE>no service password-encryption</LINE>
+            <LINE>!</LINE>
+            <LINE>hostname Router</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>ip cef</LINE>
+            <LINE>no ipv6 cef</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>ip classless</LINE>
+            <LINE>!</LINE>
+            <LINE>ip flow-export version 9</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>no cdp run</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>line con 0</LINE>
+            <LINE>!</LINE>
+            <LINE>line aux 0</LINE>
+            <LINE>!</LINE>
+            <LINE>line vty 0 4</LINE>
+            <LINE> login</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>!</LINE>
+            <LINE>end</LINE>
+          </RUNNINGCONFIG>
+          <STARTUPCONFIG />
+          <CURRENT_COMMAND_SET>pt_12.2</CURRENT_COMMAND_SET>
+          <FILE_MANAGER>
+            <FILE class="CDirectory">
+              <FILE_NUMBER>0</FILE_NUMBER>
+              <NAME />
+              <DATE_TIME>0</DATE_TIME>
+              <PERMISSION>6</PERMISSION>
+              <FILE_CONTENT />
+              <FILES>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>flash:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>3</FILE_NUMBER>
+                      <NAME>pt1000-i-mz.122-28.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIosFileContent">
+                        <DEVICE_TYPE>Router</DEVICE_TYPE>
+                        <SET_NAME>pt_12.2</SET_NAME>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>sigdef-category.xml</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIpsCategoryFileContent">
+                        <SIG_CAT />
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>sigdef-default.xml</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CIpsDatFileContent">
+                        <ICMP_SIGNATURE>
+                          <SIGNATURE>
+                            <SIG_ID>2004</SIG_ID>
+                            <SUB_ID>0</SUB_ID>
+                            <RETIRED>0</RETIRED>
+                            <ENABLED>0</ENABLED>
+                            <EVENT_ACTION>0</EVENT_ACTION>
+                          </SIGNATURE>
+                        </ICMP_SIGNATURE>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>3</FILE_COUNTER>
+                  <CAPACITY>64016384</CAPACITY>
+                </FILE>
+              </FILES>
+            </FILE>
+          </FILE_MANAGER>
+          <CONFIG_REGISTER>8450</CONFIG_REGISTER>
+          <NEXT_CONFIG_REGISTER>8450</NEXT_CONFIG_REGISTER>
+          <CURRENT_BOOT_FILE>flash:/pt1000-i-mz.122-28.bin</CURRENT_BOOT_FILE>
+          <BUILD_IN_ADDR>00E0.B09B.E359</BUILD_IN_ADDR>
+          <SECURITY>
+            <KEY_NAME />
+            <TEMP_KEY_NAME />
+            <RSA_KEY />
+            <TEMP_RSA_KEY />
+            <TIME_DATE />
+            <ENABLED>0</ENABLED>
+            <MODULUS_BITS>0</MODULUS_BITS>
+          </SECURITY>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <SIG_IPSPROCESS>
+            <SIGNATURE>
+              <SIG_ID>2004</SIG_ID>
+              <SUB_ID>0</SUB_ID>
+              <RETIRED>0</RETIRED>
+              <ENABLED>0</ENABLED>
+              <EVENT_ACTION>0</EVENT_ACTION>
+            </SIGNATURE>
+          </SIG_IPSPROCESS>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>1388.5</X>
+            <Y>121</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>196697864</MEM_ADDR>
+            <DEV_ADDR>197086528</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,Router9</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

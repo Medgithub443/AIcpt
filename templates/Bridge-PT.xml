@@ -1,0 +1,120 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Bridge-PT">Bridge</TYPE>
+          <NAME translate="true">Bridge0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtSwitchModule</TYPE>
+              <MODULE>
+                <TYPE>ePtSwitchModule</TYPE>
+                <MODEL>PT-SWITCH-NM-1CE</MODEL>
+                <PORT>
+                  <TYPE>eCopperEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>10000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0010.11AA.3D28</MACADDRESS>
+                  <BIA>0010.11AA.3D28</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtSwitchModule</TYPE>
+              <MODULE>
+                <TYPE>ePtSwitchModule</TYPE>
+                <MODEL>PT-SWITCH-NM-1CE</MODEL>
+                <PORT>
+                  <TYPE>eCopperEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>10000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>000B.BEC5.76C8</MACADDRESS>
+                  <BIA>000B.BEC5.76C8</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.54</X_COORD>
+            <Y_COORD>1918.54</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT08102K9Z</SERIALNUMBER>
+          <SYS_NAME>Switch</SYS_NAME>
+          <RUNNINGCONFIG />
+          <STARTUPCONFIG />
+          <BUILD_IN_ADDR>0005.5E65.A100</BUILD_IN_ADDR>
+          <SECURITY>
+            <KEY_NAME />
+            <TEMP_KEY_NAME />
+            <RSA_KEY />
+            <TEMP_RSA_KEY />
+            <TIME_DATE />
+            <ENABLED>0</ENABLED>
+            <MODULUS_BITS>0</MODULUS_BITS>
+          </SECURITY>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <VLANS>
+            <VLAN number="1" name="default" />
+            <VLAN number="1002" name="fddi-default" />
+            <VLAN number="1003" name="token-ring-default" />
+            <VLAN number="1004" name="fddinet-default" />
+            <VLAN number="1005" name="trnet-default" />
+          </VLANS>
+          <VTP>
+            <DOMAIN_NAME />
+            <MODE>0</MODE>
+            <VERSION>1</VERSION>
+            <PASSWORD />
+            <CONFIG_REVISION>0</CONFIG_REVISION>
+            <UPDATER_IP>0.0.0.0</UPDATER_IP>
+            <UPDATE_TIMESTAMP>0-0-00 00:00:00</UPDATE_TIMESTAMP>
+          </VTP>
+          <DHCP_SNOOPING_BINDING_DB_AGENT>
+            <CONFIGURED_FILENAME />
+            <TMP_FILENAME />
+          </DHCP_SNOOPING_BINDING_DB_AGENT>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>863</X>
+            <Y>265</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195409568</MEM_ADDR>
+            <DEV_ADDR>199450168</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,Bridge0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

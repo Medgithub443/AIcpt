@@ -1,0 +1,178 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Hub-PT">Hub</TYPE>
+          <NAME translate="true">Hub0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>000D.BD25.EADC</MACADDRESS>
+                  <BIA>000D.BD25.EADC</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>000D.BDCE.985B</MACADDRESS>
+                  <BIA>000D.BDCE.985B</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0004.9AB5.A6D8</MACADDRESS>
+                  <BIA>0004.9AB5.A6D8</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0001.4352.230A</MACADDRESS>
+                  <BIA>0001.4352.230A</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0001.420A.D4A3</MACADDRESS>
+                  <BIA>0001.420A.D4A3</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CFE</MODEL>
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0001.C999.8407</MACADDRESS>
+                  <BIA>0001.C999.8407</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.54</X_COORD>
+            <Y_COORD>1918.54</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810T60V</SERIALNUMBER>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>965.5</X>
+            <Y>271</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195408448</MEM_ADDR>
+            <DEV_ADDR>192230352</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,Hub0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

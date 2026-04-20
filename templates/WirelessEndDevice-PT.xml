@@ -1,0 +1,263 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="WirelessEndDevice-PT">WirelessEndDevice</TYPE>
+          <NAME translate="true">Wireless End Device0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtWirelessEndDeviceModule</TYPE>
+              <MODULE>
+                <TYPE>ePtWirelessEndDeviceModule</TYPE>
+                <MODEL>PT-WIRELESSENDDEVICE-NM-1W</MODEL>
+                <PORT>
+                  <TYPE>eHostWirelessG</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>1000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0001.4313.91C7</MACADDRESS>
+                  <BIA>0001.4313.91C7</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>true</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL>FE80::201:43FF:FE13:91C7</IPV6_LINK_LOCAL>
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::201:43FF:FE13:91C7</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>2045.49</X_COORD>
+            <Y_COORD>1928.13</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810HI0T</SERIALNUMBER>
+          <SYS_NAME>PC</SYS_NAME>
+          <GATEWAY>192.168.0.1</GATEWAY>
+          <DNS_CLIENT>
+            <SERVER_IP />
+            <SERVER_IPV6 />
+          </DNS_CLIENT>
+          <EMAIL_CLIENT>
+            <ENABLED>0</ENABLED>
+            <NAME />
+            <MAIL_ID />
+            <POP3_SERVER />
+            <SMTP_SERVER />
+            <USER />
+            <PASSWORD />
+            <NO_OF_MAILS>0</NO_OF_MAILS>
+          </EMAIL_CLIENT>
+          <WIRELESS_CLIENT>
+            <WIRELESS_COMMON>
+              <NETWORK_MODE>3</NETWORK_MODE>
+              <SSID>Default</SSID>
+              <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+              <AUTHEN_TYPE>0</AUTHEN_TYPE>
+              <RADIO_BAND>0</RADIO_BAND>
+              <WIDE_CHANNEL>0</WIDE_CHANNEL>
+              <STANDARD_CHANNEL>0</STANDARD_CHANNEL>
+            </WIRELESS_COMMON>
+            <PROFILES>
+              <WIRELESS_PROFILE>
+                <NAME>Default</NAME>
+                <SSID>Default</SSID>
+                <NETWORK_TYPE>7</NETWORK_TYPE>
+                <RADIO_BAND>0</RADIO_BAND>
+                <AUTHEN_TYPE>0</AUTHEN_TYPE>
+                <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+                <WEP_KEY />
+                <WPA_EAP_USERID />
+                <WPA_EAP_PASSWORD />
+                <DHCP_ENABLED>1</DHCP_ENABLED>
+                <IP_ADDRESS />
+                <SUBNET_MASK />
+                <DEFAULT_GATEWAY />
+                <DNS />
+                <CHANNEL>1</CHANNEL>
+              </WIRELESS_PROFILE>
+            </PROFILES>
+            <CURRENT_PROFILE>
+              <WIRELESS_PROFILE>
+                <NAME>Default</NAME>
+                <SSID>Default</SSID>
+                <NETWORK_TYPE>7</NETWORK_TYPE>
+                <RADIO_BAND>0</RADIO_BAND>
+                <AUTHEN_TYPE>0</AUTHEN_TYPE>
+                <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+                <WEP_KEY />
+                <WPA_EAP_USERID />
+                <WPA_EAP_PASSWORD />
+                <DHCP_ENABLED>1</DHCP_ENABLED>
+                <IP_ADDRESS />
+                <SUBNET_MASK />
+                <DEFAULT_GATEWAY />
+                <DNS />
+                <CHANNEL>1</CHANNEL>
+              </WIRELESS_PROFILE>
+            </CURRENT_PROFILE>
+          </WIRELESS_CLIENT>
+          <DHCP_CLIENT>
+            <PORT_DATA_MAP>
+              <PORT_DATA_ENTRY>
+                <PORT>Wireless0</PORT>
+              </PORT_DATA_ENTRY>
+            </PORT_DATA_MAP>
+          </DHCP_CLIENT>
+          <ACL_PROCESS>
+            <ACLS />
+          </ACL_PROCESS>
+          <ACL_V6_PROCESS>
+            <ACLS />
+          </ACL_V6_PROCESS>
+          <GATEWAYV6 />
+          <ISATAP_ENABLED>false</ISATAP_ENABLED>
+          <ISATAP_ROUTER />
+          <DHCPV6_MAIN>
+            <PARTIAL_DUID>30-7E-64-6D-</PARTIAL_DUID>
+            <ENABLED_PORTS />
+          </DHCPV6_MAIN>
+          <NDV6>
+            <ENABLED_HOST />
+            <ENABLED_ROUTER>0</ENABLED_ROUTER>
+            <SERVER_ROUTER_PORT_DATA_HEAD />
+          </NDV6>
+          <NF_COLLECTOR>
+            <ENABLED>0</ENABLED>
+          </NF_COLLECTOR>
+          <VOIP_TFTP_IP>
+            <TFTP_IP>0.0.0.0</TFTP_IP>
+            <IS_DEFAULT_TFTP>1</IS_DEFAULT_TFTP>
+          </VOIP_TFTP_IP>
+          <FILE_MANAGER>
+            <FILE class="CDirectory">
+              <FILE_NUMBER>0</FILE_NUMBER>
+              <NAME />
+              <DATE_TIME>0</DATE_TIME>
+              <PERMISSION>6</PERMISSION>
+              <FILE_CONTENT />
+              <FILES>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>Desktop:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>WRT300N-v1.03.6_fw,0.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CLinksysFirmwareUpgPage">
+                        <TEXT>Linkys firmware1</TEXT>
+                        <Firmware_Version>v1.03.6</Firmware_Version>
+                      </FILE_CONTENT>
+                    </FILE>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>2</FILE_NUMBER>
+                      <NAME>WRT300N-v1.1_1.51.2_fw,0.bin</NAME>
+                      <DATE_TIME>0</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CLinksysFirmwareUpgPage">
+                        <TEXT>Linkys firmware2</TEXT>
+                        <Firmware_Version>v1.1_1.51.2</Firmware_Version>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>2</FILE_COUNTER>
+                  <CAPACITY>100000000</CAPACITY>
+                </FILE>
+                <FILE class="CFileSystem">
+                  <FILE_NUMBER>0</FILE_NUMBER>
+                  <NAME>c:</NAME>
+                  <DATE_TIME>0</DATE_TIME>
+                  <PERMISSION>6</PERMISSION>
+                  <FILE_CONTENT />
+                  <FILES>
+                    <FILE class="CFile">
+                      <FILE_NUMBER>1</FILE_NUMBER>
+                      <NAME>sampleFile.txt</NAME>
+                      <DATE_TIME>4294967295</DATE_TIME>
+                      <PERMISSION>6</PERMISSION>
+                      <FILE_CONTENT class="CTextFileContent">
+                        <TEXT>This is a sample text file</TEXT>
+                      </FILE_CONTENT>
+                    </FILE>
+                  </FILES>
+                  <FILE_COUNTER>1</FILE_COUNTER>
+                  <CAPACITY>1000000000</CAPACITY>
+                </FILE>
+              </FILES>
+            </FILE>
+          </FILE_MANAGER>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <TRAFFICGEN_USER_TRAFFIC />
+          <TERMINAL_SETTINGS>
+            <BITS>9600</BITS>
+            <DATA_BITS>8</DATA_BITS>
+            <PARITY>2</PARITY>
+            <STOP_BITS>1</STOP_BITS>
+            <FLOW_CONTROL>0</FLOW_CONTROL>
+          </TERMINAL_SETTINGS>
+          <LOCK_SETTINGS>
+            <DLOCK>1</DLOCK>
+            <LOCK>0</LOCK>
+            <PASSWD />
+          </LOCK_SETTINGS>
+          <HTML_TAB>
+            <HTML_CODE />
+          </HTML_TAB>
+          <GUI_TAB>
+            <GUI_CODE />
+          </GUI_TAB>
+          <IMAGE_SETTINGS>
+            <CUSTOM_PHYSICAL />
+          </IMAGE_SETTINGS>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>1143</X>
+            <Y>574</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>200011864</MEM_ADDR>
+            <DEV_ADDR>197247752</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Wireless End Device0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

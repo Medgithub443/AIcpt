@@ -1,0 +1,84 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Sniffer">Sniffer</TYPE>
+          <NAME translate="true">Sniffer0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CE</MODEL>
+                <PORT>
+                  <TYPE>eCopperEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>10000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>00D0.FF37.E540</MACADDRESS>
+                  <BIA>00D0.FF37.E540</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CE</MODEL>
+                <PORT>
+                  <TYPE>eCopperEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>10000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>00E0.B020.2847</MACADDRESS>
+                  <BIA>00E0.B020.2847</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.83</X_COORD>
+            <Y_COORD>1918.83</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT0810GZX5</SERIALNUMBER>
+          <SNIFFER>1</SNIFFER>
+          <SNIFFER_PORT>1</SNIFFER_PORT>
+          <BUFFER_SIZE>256</BUFFER_SIZE>
+          <FILTERS HSRPv6="yes" TFTP="yes" SSH="yes" DTP="yes" RADIUS="yes" ARP="yes" TCP="yes" EIGRP="yes" UDP="yes" NETFLOW="yes" OSPFv6="yes" NTP="yes" ICMPv6="yes" BGP="yes" HTTPS="yes" Telnet="yes" SCCP="yes" IPSec="yes" ICMP="yes" STP="yes" DHCP="yes" CDP="yes" NDP="yes" POP3="yes" H.323="yes" RIPng="yes" RTP="yes" HSRP="yes" ISAKMP="yes" SMTP="yes" DNS="yes" FTP="yes" EIGRPv6="yes" LACP="yes" SNMP="yes" DHCPv6="yes" VTP="yes" HTTP="yes" OSPF="yes" PAgP="yes" TACACS="yes" RIP="yes" SYSLOG="yes">
+            <ACL_FILTERS />
+          </FILTERS>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>1425</X>
+            <Y>569</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>200009624</MEM_ADDR>
+            <DEV_ADDR>197809800</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Wiring Closet,Rack,Sniffer0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

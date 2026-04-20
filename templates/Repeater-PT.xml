@@ -1,0 +1,78 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Repeater-PT">Repeater</TYPE>
+          <NAME translate="true">Repeater0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CE</MODEL>
+                <PORT>
+                  <TYPE>eCopperEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>10000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0004.9A29.7B9B</MACADDRESS>
+                  <BIA>0004.9A29.7B9B</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+            <SLOT>
+              <TYPE>ePtRepeaterModule</TYPE>
+              <MODULE>
+                <TYPE>ePtRepeaterModule</TYPE>
+                <MODEL>PT-REPEATER-NM-1CE</MODEL>
+                <PORT>
+                  <TYPE>eCopperEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>10000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>false</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>false</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0002.4A75.645D</MACADDRESS>
+                  <BIA>0002.4A75.645D</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1918.54</X_COORD>
+            <Y_COORD>1918.54</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER>PTT08102B80</SERIALNUMBER>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>1040.5</X>
+            <Y>278</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195410240</MEM_ADDR>
+            <DEV_ADDR>192230808</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,Repeater0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>

@@ -1,0 +1,343 @@
+<DEVICE>
+        <ENGINE>
+          <TYPE customModel="" model="Central-Office-Server">CentralOfficeServer</TYPE>
+          <NAME translate="true">Central Office Server0</NAME>
+          <POWER>true</POWER>
+          <DESCRIPTION />
+          <MODULE>
+            <TYPE>eNonRemovableModule</TYPE>
+            <MODEL />
+            <SLOT>
+              <TYPE>eNonRemovableModule</TYPE>
+              <MODULE>
+                <TYPE>eNonRemovableModule</TYPE>
+                <MODEL />
+                <PORT>
+                  <TYPE>eCopperFastEthernet</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>false</PINS>
+                  <BANDWIDTH>100000</BANDWIDTH>
+                  <FULLDUPLEX>false</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E601</MACADDRESS>
+                  <BIA>0009.7C33.E601</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                  <IP />
+                  <SUBNET />
+                  <PORT_GATEWAY />
+                  <PORT_DNS />
+                  <PORT_DHCP_ENABLE>false</PORT_DHCP_ENABLE>
+                  <ND_SUPPRESSED>false</ND_SUPPRESSED>
+                  <TIMEOUT>14400000</TIMEOUT>
+                  <PC_FIREWALL>false</PC_FIREWALL>
+                  <PC_IPV6_FIREWALL>false</PC_IPV6_FIREWALL>
+                  <IPV6_ENABLED>false</IPV6_ENABLED>
+                  <IPV6_ADDRESS_AUTOCONFIG>false</IPV6_ADDRESS_AUTOCONFIG>
+                  <IPV6_PORT_GATEWAY />
+                  <IPV6_PORT_DNS />
+                  <IPV6_LINK_LOCAL />
+                  <IPV6_DEFAULT_LINK_LOCAL>FE80::209:7CFF:FE33:E601</IPV6_DEFAULT_LINK_LOCAL>
+                  <IPV6_PORT_DHCP_ENABLED>false</IPV6_PORT_DHCP_ENABLED>
+                  <IPV6_ADDRESSES />
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E602</MACADDRESS>
+                  <BIA>0009.7C33.E602</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E603</MACADDRESS>
+                  <BIA>0009.7C33.E603</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E604</MACADDRESS>
+                  <BIA>0009.7C33.E604</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E605</MACADDRESS>
+                  <BIA>0009.7C33.E605</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E606</MACADDRESS>
+                  <BIA>0009.7C33.E606</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE>eCopperCoaxial</TYPE>
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>1544</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E607</MACADDRESS>
+                  <BIA>0009.7C33.E607</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+                <PORT>
+                  <TYPE />
+                  <POWER>true</POWER>
+                  <PINS>true</PINS>
+                  <BANDWIDTH>0</BANDWIDTH>
+                  <FULLDUPLEX>true</FULLDUPLEX>
+                  <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
+                  <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
+                  <MACADDRESS>0009.7C33.E608</MACADDRESS>
+                  <BIA>0009.7C33.E608</BIA>
+                  <CLOCKRATE>2000000</CLOCKRATE>
+                  <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
+                  <DESCRIPTION />
+                  <CHANNEL>0</CHANNEL>
+                </PORT>
+              </MODULE>
+            </SLOT>
+          </MODULE>
+          <CUSTOM_VARS>AAAAAA==</CUSTOM_VARS>
+          <CUSTOM_INTERFACE />
+          <SYS_CONTACT />
+          <SYS_LOCATION />
+          <COORD_SETTINGS>
+            <X_COORD>1945.6</X_COORD>
+            <Y_COORD>1928.13</Y_COORD>
+            <Z_COORD>0</Z_COORD>
+          </COORD_SETTINGS>
+          <SERIALNUMBER />
+          <SYS_NAME />
+          <RUNNINGCONFIG />
+          <STARTUPCONFIG />
+          <BUILD_IN_ADDR>0060.2FB1.0CD6</BUILD_IN_ADDR>
+          <SECURITY>
+            <KEY_NAME />
+            <TEMP_KEY_NAME />
+            <RSA_KEY />
+            <TEMP_RSA_KEY />
+            <TIME_DATE />
+            <ENABLED>0</ENABLED>
+            <MODULUS_BITS>0</MODULUS_BITS>
+          </SECURITY>
+          <ALGORITHM_SETTINGS>
+            <USE_GLOBAL>true</USE_GLOBAL>
+            <CBAC_HALF_OPEN_SESSION_MULTIPLIER>1</CBAC_HALF_OPEN_SESSION_MULTIPLIER>
+            <TCP_MAX_CONNECTING_SESSIONS>100</TCP_MAX_CONNECTING_SESSIONS>
+            <TCP_MAX_OPENED_SESSIONS>1000</TCP_MAX_OPENED_SESSIONS>
+            <INTERFACE_QUEUE_SIZE>10</INTERFACE_QUEUE_SIZE>
+            <STORM_CONTROL_MULTIPLIER>10</STORM_CONTROL_MULTIPLIER>
+            <TCP_MAX_RETRANSMISSION_TIMEOUT>1000</TCP_MAX_RETRANSMISSION_TIMEOUT>
+          </ALGORITHM_SETTINGS>
+          <VLANS>
+            <VLAN number="1" name="default" />
+            <VLAN number="1002" name="fddi-default" />
+            <VLAN number="1003" name="token-ring-default" />
+            <VLAN number="1004" name="fddinet-default" />
+            <VLAN number="1005" name="trnet-default" />
+          </VLANS>
+          <VTP>
+            <DOMAIN_NAME />
+            <MODE>0</MODE>
+            <VERSION>1</VERSION>
+            <PASSWORD />
+            <CONFIG_REVISION>0</CONFIG_REVISION>
+            <UPDATER_IP>0.0.0.0</UPDATER_IP>
+            <UPDATE_TIMESTAMP>0-0-00 00:00:00</UPDATE_TIMESTAMP>
+          </VTP>
+          <SIG_IPSPROCESS>
+            <SIGNATURE>
+              <SIG_ID>2004</SIG_ID>
+              <SUB_ID>0</SUB_ID>
+              <RETIRED>0</RETIRED>
+              <ENABLED>0</ENABLED>
+              <EVENT_ACTION>0</EVENT_ACTION>
+            </SIGNATURE>
+          </SIG_IPSPROCESS>
+          <WIRELESS_SERVER>
+            <WIRELESS_COMMON>
+              <NETWORK_MODE>1</NETWORK_MODE>
+              <SSID>CO</SSID>
+              <ENCRYPT_TYPE>0</ENCRYPT_TYPE>
+              <AUTHEN_TYPE>0</AUTHEN_TYPE>
+              <RADIO_BAND>0</RADIO_BAND>
+              <WIDE_CHANNEL>0</WIDE_CHANNEL>
+              <STANDARD_CHANNEL>0</STANDARD_CHANNEL>
+            </WIRELESS_COMMON>
+            <SSID_BROADCAST_ENABLED>1</SSID_BROADCAST_ENABLED>
+            <MAC_FILTER_ENABLED>0</MAC_FILTER_ENABLED>
+            <ALLOW_ACCESS>0</ALLOW_ACCESS>
+          </WIRELESS_SERVER>
+          <FIRMWARE_VERSION>v0.93.3</FIRMWARE_VERSION>
+          <INTERNET_CONNECTION_TYPE>0</INTERNET_CONNECTION_TYPE>
+          <DEFAULT_GATEWAY>0.0.0.0</DEFAULT_GATEWAY>
+          <START_IP />
+          <MAX_USERS />
+          <LAN_IP_ADDRESS>172.16.1.1</LAN_IP_ADDRESS>
+          <LAN_SUBNET_MASK>255.255.255.0</LAN_SUBNET_MASK>
+          <REMOTE_MANAGEMENT>0</REMOTE_MANAGEMENT>
+          <DHCP_SERVER>
+            <ENABLED>1</ENABLED>
+            <POOLS>
+              <POOL>
+                <NAME>linksysPool</NAME>
+                <NETWORK>172.16.1.0</NETWORK>
+                <MASK>255.255.255.0</MASK>
+                <DEFAULT_ROUTER>172.16.1.1</DEFAULT_ROUTER>
+                <TFTP_ADDRESS>0.0.0.0</TFTP_ADDRESS>
+                <START_IP>172.16.1.100</START_IP>
+                <END_IP>172.16.1.149</END_IP>
+                <DNS_SERVER>0.0.0.0</DNS_SERVER>
+                <MAX_USERS>50</MAX_USERS>
+                <DOMAIN_NAME />
+                <DHCP_POOL_LEASES />
+              </POOL>
+            </POOLS>
+            <DHCP_RESERVATIONS />
+            <AUTOCONFIG />
+          </DHCP_SERVER>
+          <PPPOE_CLIENT>
+            <USERNAME />
+            <PASSWORD />
+            <SERVICE_NAME />
+            <CONNECTION_STATUS>3</CONNECTION_STATUS>
+          </PPPOE_CLIENT>
+          <DNS_CLIENT>
+            <SERVER_IP />
+            <SERVER_IPV6 />
+          </DNS_CLIENT>
+          <HTTP_SERVER>
+            <ENABLED>1</ENABLED>
+            <USERNAME>admin</USERNAME>
+            <PASSWORD>admin</PASSWORD>
+          </HTTP_SERVER>
+          <SINGLE_PORT_FORWARDING />
+          <ACCESS_POLICIES />
+          <DMZ_SETTINGS>
+            <STATUS>false</STATUS>
+            <DESTINATION_IP_ADDR>0.0.0.0</DESTINATION_IP_ADDR>
+          </DMZ_SETTINGS>
+          <DOMAIN_NAME />
+          <PAP_CHAP_AUTHENTICATOR>
+            <ALL_PORT_DATA />
+          </PAP_CHAP_AUTHENTICATOR>
+          <DHCPV6_SERVER_LIST>
+            <ASSOCIATED_PORTS>
+              <ASSOCIATED_PORT>
+                <PORT_NAME>Vlan1</PORT_NAME>
+                <DHCPV6_SERVER>
+                  <DHCPV6_SERVER_PORT_DATA>
+                    <ENABLED>1</ENABLED>
+                    <RAPID_COMMIT>0</RAPID_COMMIT>
+                    <HINT>0</HINT>
+                    <POOL_NAME>IPv6-Pool</POOL_NAME>
+                    <INITIAL_ADVERTISE_TIME />
+                    <LAST_ADVERTISE_TIME />
+                    <ADVERTISE_MSG_COUNT>0</ADVERTISE_MSG_COUNT>
+                    <INITIAL_REPLY_TIME />
+                    <LAST_REPLY_TIME />
+                    <REPLY_MSG_COUNT>0</REPLY_MSG_COUNT>
+                  </DHCPV6_SERVER_PORT_DATA>
+                  <BINDING_TABLE />
+                </DHCPV6_SERVER>
+              </ASSOCIATED_PORT>
+            </ASSOCIATED_PORTS>
+            <DHCPv6_POOLS>
+              <DHCPV6_POOL>
+                <POOL_NAME>IPv6-Pool</POOL_NAME>
+                <DNS_SERVER>0.0.0.0</DNS_SERVER>
+                <DOMAIN_NAME />
+                <PORT_NAME>Vlan1</PORT_NAME>
+                <STATIC_PDS />
+                <DHCPV6_PREFIX_DELEGATION>
+                  <PREFIX_POOL_NAME>IPv6-Local-Pool</PREFIX_POOL_NAME>
+                  <VALID_LIFETIME>2592000</VALID_LIFETIME>
+                  <PREFERRED_LIFETIME>604800</PREFERRED_LIFETIME>
+                  <IAID>0</IAID>
+                  <PREFIX_LENGTH>0</PREFIX_LENGTH>
+                  <ASSIGNED_PREFIX_LENGTH>0</ASSIGNED_PREFIX_LENGTH>
+                  <PREFIX>::</PREFIX>
+                  <CLIENT_DUID />
+                  <IS_FOR_ONE_CLIENT>0</IS_FOR_ONE_CLIENT>
+                </DHCPV6_PREFIX_DELEGATION>
+              </DHCPV6_POOL>
+            </DHCPv6_POOLS>
+            <IPv6_LOCAL_POOLS>
+              <DHCPV6_LOCAL_PREFIX_POOL>
+                <PREFIX_POOL_NAME>IPv6-Local-Pool</PREFIX_POOL_NAME>
+                <PREFIX>2001::1</PREFIX>
+                <PREFIX_LENGTH>64</PREFIX_LENGTH>
+                <ASSIGNED_PREFIX_LENGTH>64</ASSIGNED_PREFIX_LENGTH>
+              </DHCPV6_LOCAL_PREFIX_POOL>
+            </IPv6_LOCAL_POOLS>
+          </DHCPV6_SERVER_LIST>
+          <ENABLED>1</ENABLED>
+        </ENGINE>
+        <WORKSPACE>
+          <LOGICAL>
+            <X>796.5</X>
+            <Y>403</Y>
+            <DEVCLUSTERID>1-1</DEVCLUSTERID>
+            <CUSTOM_IMAGE_PHYSICAL />
+            <CUSTOM_IMAGE_LOGICAL />
+            <MEM_ADDR>195412704</MEM_ADDR>
+            <DEV_ADDR>191336592</DEV_ADDR>
+          </LOGICAL>
+          <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Central Office Server0</PHYSICAL>
+        </WORKSPACE>
+      </DEVICE>
