@@ -15,6 +15,7 @@ import traceback
 from pathlib import Path
 
 import prompt_builder
+import table_builder
 import xml_builder
 
 
@@ -109,6 +110,8 @@ def run_gui() -> int:
 
             tabs.addTab(self._tab_prompt(), "1. Промпт для нейросети")
             tabs.addTab(self._tab_build(), "2. Сборка .pkt")
+            tabs.addTab(self._tab_table(), "3. Таблица IP-плана")
+            self._tabs = tabs
 
             self.status = self.statusBar()
             self.status.showMessage("Готово. Выбери txt/pdf/docx с описанием сети.")
@@ -186,6 +189,139 @@ def run_gui() -> int:
             lay.addWidget(self.build_log, 1)
 
             return w
+
+        # ---------- TAB 3: TABLE ----------
+        def _tab_table(self) -> QtWidgets.QWidget:
+            w = QtWidgets.QWidget()
+            lay = QtWidgets.QVBoxLayout(w)
+
+            hint = QtWidgets.QLabel(
+                "Заполни IP-план. Если столбец «Тип устройства» пуст — "
+                "программа сама определит тип по имени (Server… → server, "
+                "Router…/R1 → router, SW… → switch, Hub… → hub, Comp…/PC… → pc)."
+            )
+            hint.setWordWrap(True)
+            lay.addWidget(hint)
+
+            self.table = QtWidgets.QTableWidget(8, 7)
+            self.table.setHorizontalHeaderLabels([
+                "Сеть (IP/CIDR)", "Устройство", "Интерфейс",
+                "IP-адрес", "Маска", "Шлюз", "Тип (опц.)",
+            ])
+            self.table.horizontalHeader().setSectionResizeMode(
+                QtWidgets.QHeaderView.Stretch
+            )
+            self.table.verticalHeader().setVisible(False)
+            self.table.setEditTriggers(
+                QtWidgets.QAbstractItemView.AllEditTriggers
+            )
+            lay.addWidget(self.table, 1)
+
+            row = QtWidgets.QHBoxLayout()
+            btn_add = QtWidgets.QPushButton("+ строка")
+            btn_add.clicked.connect(lambda: self.table.insertRow(self.table.rowCount()))
+            btn_del = QtWidgets.QPushButton("− строка")
+            btn_del.clicked.connect(self._table_del_row)
+            btn_clear = QtWidgets.QPushButton("Очистить")
+            btn_clear.clicked.connect(self._table_clear)
+            btn_load = QtWidgets.QPushButton("Загрузить TSV/CSV…")
+            btn_load.clicked.connect(self._table_load)
+            btn_save = QtWidgets.QPushButton("Сохранить TSV…")
+            btn_save.clicked.connect(self._table_save)
+            row.addWidget(btn_add)
+            row.addWidget(btn_del)
+            row.addWidget(btn_clear)
+            row.addStretch(1)
+            row.addWidget(btn_load)
+            row.addWidget(btn_save)
+            lay.addLayout(row)
+
+            btn_gen = QtWidgets.QPushButton(
+                "Сгенерировать simplified XML и перейти к сборке .pkt"
+            )
+            btn_gen.clicked.connect(self._table_to_simplified)
+            lay.addWidget(btn_gen)
+
+            return w
+
+        def _table_del_row(self) -> None:
+            r = self.table.currentRow()
+            if r >= 0:
+                self.table.removeRow(r)
+
+        def _table_clear(self) -> None:
+            self.table.clearContents()
+            self.table.setRowCount(8)
+
+        def _table_load(self) -> None:
+            path, _ = QtWidgets.QFileDialog.getOpenFileName(
+                self, "Загрузить таблицу", "",
+                "TSV/CSV (*.tsv *.csv *.txt);;Все файлы (*)"
+            )
+            if not path:
+                return
+            try:
+                text = Path(path).read_text(encoding="utf-8", errors="replace")
+            except Exception as e:
+                self._show_error("Ошибка чтения", e)
+                return
+            rows = table_builder.parse_text_table(text)
+            self.table.setRowCount(max(len(rows) + 2, 4))
+            for ri, r in enumerate(rows):
+                for ci, val in enumerate([
+                    r.network, r.device, r.iface, r.ip, r.mask, r.gateway, r.type
+                ]):
+                    self.table.setItem(ri, ci, QtWidgets.QTableWidgetItem(val))
+            self.status.showMessage(f"Загружено {len(rows)} строк из {path}", 4000)
+
+        def _table_save(self) -> None:
+            path, _ = QtWidgets.QFileDialog.getSaveFileName(
+                self, "Сохранить таблицу", "table.tsv",
+                "TSV (*.tsv);;CSV (*.csv);;Все файлы (*)"
+            )
+            if not path:
+                return
+            sep = "," if path.lower().endswith(".csv") else "\t"
+            lines = [sep.join([
+                "Сеть", "Устройство", "Интерфейс", "IP", "Маска", "Шлюз", "Тип",
+            ])]
+            for r in range(self.table.rowCount()):
+                cells = []
+                for c in range(7):
+                    item = self.table.item(r, c)
+                    cells.append(item.text() if item else "")
+                if any(cells):
+                    lines.append(sep.join(cells))
+            Path(path).write_text("\n".join(lines), encoding="utf-8")
+            self.status.showMessage(f"Сохранено: {path}", 4000)
+
+        def _table_to_simplified(self) -> None:
+            rows: list[table_builder.Row] = []
+            for r in range(self.table.rowCount()):
+                cells = [
+                    (self.table.item(r, c).text() if self.table.item(r, c) else "")
+                    for c in range(7)
+                ]
+                if not any(cells):
+                    continue
+                rows.append(table_builder.Row(*cells))
+            if not rows:
+                QtWidgets.QMessageBox.warning(
+                    self, "AIcpt", "Таблица пустая. Заполни хотя бы одну строку."
+                )
+                return
+            try:
+                xml = table_builder.build_simplified_xml(rows)
+            except Exception as e:
+                self._show_error("Не удалось собрать simplified XML", e)
+                return
+
+            self.simpl_edit.setPlainText(xml)
+            self._tabs.setCurrentIndex(1)  # переключиться на «Сборка .pkt»
+            self.status.showMessage(
+                f"Собрано {len(set(r.device for r in rows if r.device))} устройств. "
+                f"Нажми «Собрать полный XML и .pkt»."
+            )
 
         # ---- handlers ----
         def _pick_user_file(self) -> None:

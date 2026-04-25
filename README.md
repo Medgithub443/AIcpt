@@ -39,15 +39,21 @@ pip install PyQt5 pypdf python-docx
 python main.py
 ```
 
-Открывается окно с двумя вкладками:
+Открывается окно с тремя вкладками:
 
 1. **«Промпт для нейросети»** — выбери txt/pdf/docx с описанием сети,
    нажми «Собрать prompt_for_ai.txt», скопируй получившийся текст и
    вставь в Claude или ChatGPT.
 
 2. **«Сборка .pkt»** — вставь упрощённый XML от нейросети (или загрузи
-   из файла), нажми «Собрать полный XML и .pkt». Готовый `network.pkt`
+   из файла), нажми «Собрать полный XML и .pkt». Готовый `realTopolog.pkt`
    появится в каталоге сессии `output/YYYY-MM-DD_HH-MM-SS/`.
+
+3. **«Таблица IP-плана»** — заполни таблицу: Сеть | Устройство | Интерфейс |
+   IP | Маска | Шлюз | Тип. Если столбец «Тип» пустой, программа определит
+   его сама по имени (Server2_popov → server, Router1 → router, SW1 → switch,
+   Hub-X → hub, Comp1/PC1 → pc). Кнопка «Сгенерировать» переведёт таблицу
+   в simplified XML и автоматически перейдёт ко 2-й вкладке.
 
 ### CLI
 
@@ -67,28 +73,25 @@ python main.py build simplified.xml
 
 ```
 AIcpt/
-├── main.py                  # CLI + PyQt5 GUI
-├── prompt_builder.py        # step 1-3: собрать prompt_for_ai.txt
-├── xml_builder.py           # step 4-7: simplified → полный XML → .pkt
-├── repacket.py              # оригинальный конвертер XML → .pkt (как есть)
-├── unpacket.py              # оригинальный конвертер .pkt → XML (как есть)
+├── main.py                  # CLI + PyQt5 GUI (3 вкладки)
+├── prompt_builder.py        # текстовое описание → prompt_for_ai.txt
+├── table_builder.py         # IP-таблица → simplified XML  (NEW)
+├── xml_builder.py           # simplified → полный PT XML → .pkt
+├── repacket.py / unpacket.py
 ├── white.xml                # пустой шаблон Cisco PT 6.2
+├── templates/               # 43 реальных DEVICE-шаблона  (NEW)
+│   ├── 1841.xml, 2960-24TT.xml, Server-PT.xml, Hub-PT.xml, ...
+│   └── (всё, что есть в Packet Tracer 6.2)
 ├── Decipher/                # крипто-модули (Twofish + EAX + CMAC)
-│   ├── eax.py
-│   ├── twofish.py
-│   ├── cmac.py
-│   ├── ctr.py
-│   └── pt_crypto.py
-├── pre_prompt.txt           # инструкция для нейросети (роль + правила)
-├── specification_guide.txt  # спецификация упрощённого XML и полного PT-XML
-├── devices_reference.txt    # справочник моделей и их интерфейсов
-└── output/                  # рабочие сессии (создаются автоматически)
-    └── 2026-04-18_14-33-09/
-        ├── user_input.txt
-        ├── prompt_for_ai.txt
+├── pre_prompt.txt           # инструкция для нейросети
+├── specification_guide.txt  # спецификация упрощённого XML
+├── devices_reference.txt    # каталог моделей и интерфейсов
+└── output/                  # рабочие сессии
+    └── 2026-04-25_18-14-59/
+        ├── user_input.txt, prompt_for_ai.txt
         ├── simplified.xml
-        ├── realTopolog.xml
-        └── realTopolog.pkt
+        ├── realTopolog.xml      # валидный Cisco PT XML
+        └── realTopolog.pkt      # шифрованный .pkt (открывается в PT 6.2)
 ```
 
 ## Формат упрощённого XML
