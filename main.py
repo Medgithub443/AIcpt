@@ -98,7 +98,7 @@ def run_gui() -> int:
     class AIcptWindow(QtWidgets.QMainWindow):
         def __init__(self) -> None:
             super().__init__()
-            self.setWindowTitle("AIcpt 0.4.1-alfa — описание сети → Cisco Packet Tracer")
+            self.setWindowTitle("AIcpt 0.4.2-alfa — описание сети → Cisco Packet Tracer")
             self.resize(1000, 720)
             self.session_dir: Path | None = None
             self.prompt_path: Path | None = None
