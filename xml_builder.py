@@ -492,11 +492,26 @@ def _apply_server_services(engine: ET.Element, services: dict, port_name: str) -
                 db = ET.SubElement(dns_block, "NAMESERVER-DATABASE")
             for c in list(db):
                 db.remove(c)
+            # PT 6.2 формат: <RESOURCE-RECORD> с TYPE=A-REC/CNAME/MX/NS,
+            # NAME, TTL и IPADDRESS (для A-REC) либо HOSTNAME (для CNAME/NS).
+            # Принимаем "A" как алиас "A-REC".
             for rec in services["dns"].get("records", []):
-                r = ET.SubElement(db, "RECORD")
+                rtype = (rec.get("type") or "A").upper()
+                if rtype == "A":
+                    rtype = "A-REC"
+                r = ET.SubElement(db, "RESOURCE-RECORD")
+                ET.SubElement(r, "TYPE").text = rtype
                 ET.SubElement(r, "NAME").text = rec.get("name", "")
-                ET.SubElement(r, "TYPE").text = rec.get("type", "A")
-                ET.SubElement(r, "ADDRESS").text = rec.get("ip") or rec.get("address", "")
+                ET.SubElement(r, "TTL").text = str(rec.get("ttl", 86400))
+                if rtype == "A-REC":
+                    ET.SubElement(r, "IPADDRESS").text = (
+                        rec.get("ip") or rec.get("address") or rec.get("ipaddress") or ""
+                    )
+                else:
+                    # CNAME/NS — указатель на host
+                    ET.SubElement(r, "HOSTNAME").text = (
+                        rec.get("hostname") or rec.get("ip") or rec.get("address") or ""
+                    )
 
 
 def _running_config_for_router(dev: dict, port_names: list[str]) -> list[str]:

@@ -85,8 +85,13 @@ def _safe_read(path: Path) -> str:
 def build_prompt(
     user_text: str,
     assets_dir: str | Path,
+    topology_description: str | None = None,
 ) -> str:
-    """Склеивает pre_prompt, спецификацию, справочник устройств и текст пользователя."""
+    """Склеивает pre_prompt, спецификацию, справочник устройств и текст пользователя.
+
+    `topology_description` — опциональный блок от topology_recogniser_helper,
+    содержащий список устройств и связей, распознанных по картинке схемы.
+    """
     assets = Path(assets_dir)
 
     pre_prompt = _safe_read(assets / "pre_prompt.txt")
@@ -94,11 +99,16 @@ def build_prompt(
     devices = _safe_read(assets / "devices_reference.txt")
 
     blocks = [
-        ("# ИНСТРУКЦИЯ ДЛЯ НЕЙРОСЕТИ", pre_prompt),
-        ("# СПЕЦИФИКАЦИЯ УПРОЩЁННОГО XML", spec),
-        ("# СПРАВОЧНИК УСТРОЙСТВ CISCO PACKET TRACER", devices),
-        ("# ОПИСАНИЕ СЕТИ ОТ ПОЛЬЗОВАТЕЛЯ", user_text.strip() or "[пусто]"),
+        ("# INSTRUCTIONS FOR THE AI", pre_prompt),
+        ("# SIMPLIFIED XML SPECIFICATION", spec),
+        ("# CISCO PACKET TRACER DEVICE REFERENCE", devices),
     ]
+    if topology_description:
+        blocks.append((
+            "# AUTO-RECOGNISED TOPOLOGY (from diagram in user document, BETA)",
+            topology_description,
+        ))
+    blocks.append(("# USER NETWORK DESCRIPTION (raw)", user_text.strip() or "[empty]"))
 
     pieces: list[str] = []
     for title, body in blocks:
@@ -120,19 +130,51 @@ def run(
     user_file: str | Path,
     assets_dir: str | Path,
     output_base: str | Path = "output",
+    auto_topology: bool = False,
+    topology_log=None,
 ) -> tuple[Path, Path]:
     """Полный шаг 1-3: прочитать описание, собрать prompt_for_ai.txt, сохранить.
+
+    auto_topology=True пытается извлечь скриншот схемы из PDF/DOCX и
+    добавить распознанное описание устройств/связей в промпт.
 
     Возвращает (каталог_сессии, путь_до_prompt_for_ai.txt).
     """
     user_text = read_user_input(user_file)
-    prompt = build_prompt(user_text, assets_dir)
+
+    topology_desc: str | None = None
+    if auto_topology:
+        ext = Path(user_file).suffix.lower()
+        if ext in (".pdf", ".docx", ".doc"):
+            try:
+                import topology_recogniser_helper as trh
+                topology_desc = trh.recognise_from_image(Path(user_file).resolve())
+                if topology_log:
+                    if topology_desc:
+                        n_devs = topology_desc.count("name=")
+                        topology_log(
+                            f"[+] topology_recogniser: распознано "
+                            f"~{n_devs} устройств, добавлено в промпт."
+                        )
+                    else:
+                        topology_log(
+                            "[!] topology_recogniser: схему сети не нашёл."
+                        )
+            except Exception as e:
+                if topology_log:
+                    topology_log(f"[-] topology_recogniser: {e}")
+
+    prompt = build_prompt(user_text, assets_dir, topology_description=topology_desc)
 
     session_dir = make_output_dir(output_base)
     prompt_path = session_dir / "prompt_for_ai.txt"
     prompt_path.write_text(prompt, encoding="utf-8")
 
     (session_dir / "user_input.txt").write_text(user_text, encoding="utf-8")
+    if topology_desc:
+        (session_dir / "topology_recognised.txt").write_text(
+            topology_desc, encoding="utf-8"
+        )
 
     return session_dir, prompt_path
 

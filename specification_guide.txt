@@ -1,172 +1,211 @@
-СПЕЦИФИКАЦИЯ УПРОЩЁННОГО XML (формат, который ты возвращаешь)
-vs. полная структура Cisco Packet Tracer 6.2 XML (её строит программа).
+SIMPLIFIED XML SPECIFICATION (the format you generate)
+vs. full Cisco Packet Tracer 6.2 XML structure (the program builds it).
 
 ===============================================================================
-A. УПРОЩЁННЫЙ XML — ТО, ЧТО ТЫ ГЕНЕРИРУЕШЬ
+A. SIMPLIFIED XML — WHAT YOU GENERATE
 ===============================================================================
 
-Корень: <network>
-  Дети:
-    <devices>  — один или несколько <device>
-    <links>    — ноль или несколько <link>
+Root element: <network>
+  Children:
+    <devices>  — one or more <device> elements
+    <links>    — zero or more <link> elements
 
 -------------------------------------------------------------------------------
 A.1 <device>
 -------------------------------------------------------------------------------
-Атрибуты:
-  name    (обязательно, строка, уникально в пределах сети)
-  type    (обязательно): router | switch | pc | laptop | server |
-                         access_point | hub | cloud | printer | ip_phone
-  model   (обязательно): строка модели из справочника (раздел B)
-  x, y    (по желанию, число): координаты логической схемы.
-          По умолчанию программа раскладывает устройства сеткой 200×150
-          от (100, 100) по 6 в ряд.
+Attributes:
+  name    (required, string, unique within the network)
+  type    (required): router | switch | pc | laptop | server | printer |
+                      ip_phone | hub | bridge | repeater | access_point |
+                      wireless_router | cloud | modem | voip | tablet |
+                      smartphone | tv | firewall | sniffer
+  model   (recommended): exact model string from the device reference.
+                         If omitted, defaults are used (router→1841,
+                         switch→2960-24TT, server→Server-PT, hub→Hub-PT, …).
+  x, y    (optional): logical-canvas coordinates. Default: 200×150 grid
+                      starting at (100, 100).
+  gateway (optional): default gateway for end-hosts.
 
-Вложенные элементы:
-  <interface> ... </interface>           — 0..N штук
-  <vlans> <vlan .../> ... </vlans>       — 0..1 блок (имеет смысл для switch)
-  <config> <line>…</line> ... </config>  — 0..1 блок running-config
+Children:
+  <interface> ... </interface>          — 0..N
+  <vlans> <vlan .../> ... </vlans>      — 0..1 (switches only)
+  <config> <line>…</line> ... </config> — 0..1 running-config (router/switch)
+  <services> ... </services>            — 0..1 (servers only)
+  <modules> ... </modules>              — 0..1 (declarative; not yet applied)
 
 -------------------------------------------------------------------------------
 A.2 <interface>
 -------------------------------------------------------------------------------
-Атрибуты:
-  name       (обязательно): имя порта как в IOS
-                            FastEthernet0/0, GigabitEthernet0/0,
-                            Serial0/0/0, Ethernet0/1/0, FastEthernet0 (PC).
-  ip         (строка IPv4, опционально)
-  subnet     (строка, например 255.255.255.0)
-  gateway    (IPv4, только для pc/laptop/server — default gateway)
-  clockrate  (число в bps — только для Serial DCE; обычно 2000000 или 64000)
-  bandwidth  (число в кбит/с — опционально)
-  mac        (XXXX.XXXX.XXXX — опционально, иначе сгенерируется)
-  duplex     (full | half | auto — опционально)
+Attributes:
+  name       (required): IOS-style port name.
+                          FastEthernet0/0, GigabitEthernet0/0, Serial0/0/0,
+                          Ethernet0/1/0, FastEthernet0 (PC), Wireless0,
+                          "Port 0" (hub).
+  ip         (string, IPv4)
+  subnet     (string, e.g. 255.255.255.0)
+  gateway    (IPv4, end-hosts only)
+  clockrate  (bps; Serial DCE only — usually 2000000 or 64000)
+  bandwidth  (kbps)
+  mac        (XXXX.XXXX.XXXX)
+  duplex     (full | half | auto)
+  vlan       (1..4094) — VLAN number for switch access port
+  trunk      ("true") — switch trunk port
 
 -------------------------------------------------------------------------------
 A.3 <vlans> / <vlan>
 -------------------------------------------------------------------------------
-Атрибуты <vlan>:
-  number  (обязательно): число 1..4094
-  name    (по желанию): имя VLAN
+Switch only. Default system VLANs (1, 1002–1005) are added automatically.
+  <vlan number="10" name="staff"/>
 
 -------------------------------------------------------------------------------
 A.4 <config> / <line>
 -------------------------------------------------------------------------------
-Содержимое — многострочный running-config IOS. Каждая строка вкладывается в
-<line>...</line>. Команды один в один как в Cisco CLI. Программа перенесёт
-их в <RUNNINGCONFIG>/<LINE> внутри ENGINE устройства.
+Multi-line running-config. One IOS command per <line>. The program copies
+this verbatim into <RUNNINGCONFIG>/<LINE> in the device's ENGINE block.
 
 -------------------------------------------------------------------------------
-A.5 <link>
+A.5 <services>  (server only)
 -------------------------------------------------------------------------------
-Атрибуты:
-  from       (обязательно): имя устройства (должно совпадать с <device name=>)
-  from_port  (обязательно): имя интерфейса на стороне from
-  to         (обязательно): имя устройства
-  to_port    (обязательно): имя интерфейса на стороне to
-  type       (по желанию): copper | fiber | serial | crossover
-             По умолчанию copper. crossover — это медный кабель
-             кросс-овер (нужен, например, между двумя одинаковыми
-             устройствами без свитча посередине).
+Boolean services (single attribute `enabled`):
+  <http enabled="true|false"/>
+  <https enabled="true|false"/>
+  <ftp enabled="true|false"/>
+  <tftp enabled="true|false"/>
+  <ntp enabled="true|false"/>
+  <syslog enabled="true|false"/>
+  <email enabled="true|false"/>   (controls SMTP_ENABLED + POP3_ENABLED)
+
+DHCP server:
+  <dhcp enabled="true">
+    <pool name="LAN" network="10.0.0.0" mask="255.255.255.0"
+          default_router="10.0.0.1" dns="10.0.0.50"
+          start="10.0.0.100" end="10.0.0.200"
+          max_users="512" domain=""/>
+  </dhcp>
+
+DNS server:
+  <dns enabled="true">
+    <record name="host.example.com" type="A" ip="10.0.0.50"/>
+    <record name="alias" type="CNAME" hostname="host.example.com"/>
+  </dns>
+
+The simplified DNS attribute `type="A"` is converted to PT's "A-REC". Each
+record is rendered as a <RESOURCE-RECORD> with TYPE/NAME/TTL and either
+IPADDRESS (for A-REC) or HOSTNAME (for CNAME / NS).
+
+-------------------------------------------------------------------------------
+A.6 <link>
+-------------------------------------------------------------------------------
+Attributes:
+  from, to            (required) — device names from <device name="...">
+  from_port, to_port  (required) — interface names on each end
+  type                (optional) — copper (default) | crossover | serial |
+                                   fiber | coaxial | phone
+                       crossover — copper cross-over (router↔router etc.)
 
 ===============================================================================
-B. ПОЛНАЯ СТРУКТУРА CISCO PACKET TRACER XML (ТОЛЬКО ДЛЯ СПРАВКИ)
+B. FULL CISCO PT XML STRUCTURE  (FYI — the program builds it for you)
 ===============================================================================
 
-Эту структуру строит программа AIcpt. Тебе она нужна только как контекст —
-ЧТОБЫ ПОНИМАТЬ КАКИЕ ПОЛЯ ТЫ МОЖЕШЬ ВЛИЯТЬ, А КАКИЕ ПРОГРАММА ПРИДУМАЕТ САМА.
+Root:  <PACKETTRACER5> ... </PACKETTRACER5>
+Required version: 6.2.0.0052.
 
-Корень XML: <PACKETTRACER5>. Обязательная версия: 6.2.0.0052.
-
-Секции:
-  <VERSION>              — константа "6.2.0.0052"
-  <PIXMAPBANK/>          — пусто
-  <NETWORK>              — ЗДЕСЬ лежат твои устройства и связи
-    <DEVICES>            — список <DEVICE>
-    <LINKS>              — список <LINK>
+Sections:
+  <VERSION>              constant "6.2.0.0052"
+  <PIXMAPBANK/>          empty
+  <NETWORK>              ← your devices and links go here
+    <DEVICES>            list of <DEVICE>
+    <LINKS>              list of <LINK>
     <SHAPETESTS/>
     <DESCRIPTION translate="true"/>
-  <SCENARIOSET>          — "Scenario 0", programm подставит
-  <OPTIONS>              — огромный блок настроек UI: бэкграунды, шрифты,
-                           цвета, сертификаты, скрипт-модули. НЕ ТРОГАЙ.
-  <PHYSICALWORKSPACE>    — иерархия Intercity / Home City / Corporate Office /
-                           Main Wiring Closet. Берётся из white.xml как есть.
-  <FILTERS>              — набор протоколов (ICMP, OSPF, BGP, ...). Как есть.
-  <CLUSTERS>             — RootCluster. Как есть.
-  <LINES/>, <RECTANGLES/>, <ELLIPSES/>, <POLYGONS/>   — пусто
-  <USER_PROFILE>         — Guest
-  <MULTIUSER>            — пусто
+  <SCENARIOSET>          "Scenario 0"
+  <OPTIONS>              UI / language / certificates / script modules
+  <PHYSICALWORKSPACE>    Intercity / Home City / Corporate Office / Closet
+  <FILTERS>              ICMP, OSPF, BGP, etc.
+  <CLUSTERS>             RootCluster
+  <LINES/>, <RECTANGLES/>, <ELLIPSES/>, <POLYGONS/>
+  <USER_PROFILE>         Guest
+  <MULTIUSER>
   <GEOVIEW_GRAPHICSITEMS/>
-  <SCRIPT_MODULE>        — как есть
+  <SCRIPT_MODULE>
   <CEPS/>
 
 -------------------------------------------------------------------------------
-B.1 <DEVICE> — полная структура
+B.1 <DEVICE>  — full structure
 -------------------------------------------------------------------------------
 <DEVICE>
   <ENGINE>
-    <TYPE customModel="" model="<MODEL>">Router|Switch|Pc|...</TYPE>
-    <NAME translate="true"><hostname>\n</NAME>   # '\n' в конце — артефакт PT
+    <TYPE customModel="" model="<MODEL>">Router|Switch|Pc|Server|Hub|...</TYPE>
+    <NAME translate="true">hostname</NAME>
     <POWER>true</POWER>
     <DESCRIPTION/>
     <MODULE>
-      <TYPE>eNonRemovableModule</TYPE>
-      <MODEL/>
+      <TYPE>...</TYPE>
       <SLOT>
-        <TYPE>eNonRemovableModule|eInterfaceCard|ePtHostModule|…</TYPE>
+        <TYPE>...</TYPE>
         <MODULE>
-          <TYPE>…</TYPE>
-          <MODEL>HWIC-4ESW | PT-HOST-NM-1CFE | …</MODEL>
+          <MODEL>...</MODEL>
           <PORT>
-            <TYPE>eCopperFastEthernet|eGigabitEthernet|eSerial|…</TYPE>
-            <POWER>true</POWER>
-            <PINS>true</PINS>
-            <BANDWIDTH>100000</BANDWIDTH>
-            <FULLDUPLEX>false</FULLDUPLEX>
-            <AUTONEGOTIATEBANDWIDTH>true</AUTONEGOTIATEBANDWIDTH>
-            <AUTONEGOTIATEDUPLEX>true</AUTONEGOTIATEDUPLEX>
-            <MACADDRESS>00E0.F94D.2501</MACADDRESS>
-            <BIA>00E0.F94D.2501</BIA>
-            <CLOCKRATE>2000000</CLOCKRATE>
-            <CLOCKRATEFLAG>false</CLOCKRATEFLAG>
-            <DESCRIPTION/>
-            <CHANNEL>0</CHANNEL>
-            <IP>10.0.0.1</IP>            # <-- адрес настраивается здесь
+            <TYPE>eCopperFastEthernet|eGigabitEthernet|eSerial|...</TYPE>
+            <MACADDRESS>...</MACADDRESS>
+            <BIA>...</BIA>
+            <IP>10.0.0.1</IP>           ← per-port IP
             <SUBNET>255.255.255.0</SUBNET>
+            <PORT_GATEWAY/>
             <IPV6_LINK_LOCAL>FE80::...</IPV6_LINK_LOCAL>
+            ... (TIMEOUT, FIREWALL flags, etc.)
           </PORT>
-          ... ещё порты ...
+          ... more ports ...
         </MODULE>
       </SLOT>
-      ... ещё слоты ...
     </MODULE>
 
-    <!-- Роутеры/свитчи дополнительно: -->
-    <RUNNINGCONFIG>
-      <LINE>version 12.4</LINE>
-      <LINE>hostname R1</LINE>
-      ...
-    </RUNNINGCONFIG>
-    <STARTUPCONFIG>...</STARTUPCONFIG>
+    <!-- routers / switches -->
+    <RUNNINGCONFIG>  <LINE>...</LINE>  ... </RUNNINGCONFIG>
+    <STARTUPCONFIG>  ... </STARTUPCONFIG>
+    <FILE_MANAGER> ... flash:/IOS image ... </FILE_MANAGER>
 
-    <!-- Только для switch: -->
-    <VLANS>
-      <VLAN number="1" name="default"/>
-    </VLANS>
-    <VTP>
-      <DOMAIN_NAME/>
-      <MODE>0</MODE>
-      <VERSION>1</VERSION>
-    </VTP>
-    <SECURITY>...</SECURITY>
+    <!-- switches -->
+    <VLANS> <VLAN number="1" name="default"/> ... </VLANS>
+    <VTP> <DOMAIN_NAME/> <MODE>0</MODE> ... </VTP>
+    <SECURITY> ... </SECURITY>
 
-    <!-- Только для PC / end-device: -->
+    <!-- end-hosts -->
     <GATEWAY>10.0.0.1</GATEWAY>
-    <DNS_CLIENT><SERVER_IP/></DNS_CLIENT>
+    <DNS_CLIENT> <SERVER_IP/> </DNS_CLIENT>
+    <EMAIL_CLIENT> ... </EMAIL_CLIENT>
+    <WIRELESS_CLIENT> ... </WIRELESS_CLIENT>
 
-    <SYS_NAME>Router1</SYS_NAME>
-    <SERIALNUMBER>FTX1111H5ZS</SERIALNUMBER>
-    <CUSTOM_VARS/>
+    <!-- servers (Server-PT) -->
+    <HTTP_SERVER> <ENABLED>1</ENABLED> </HTTP_SERVER>
+    <HTTPS_SERVER> <HTTPSENABLED>1</HTTPSENABLED> </HTTPS_SERVER>
+    <DNS_SERVER>
+      <ENABLED>1</ENABLED>
+      <NAMESERVER-DATABASE>
+        <RESOURCE-RECORD>
+          <TYPE>A-REC</TYPE>
+          <NAME>example.com</NAME>
+          <TTL>86400</TTL>
+          <IPADDRESS>10.0.0.50</IPADDRESS>
+        </RESOURCE-RECORD>
+      </NAMESERVER-DATABASE>
+    </DNS_SERVER>
+    <DHCP_SERVERS>
+      <ASSOCIATED_PORTS>
+        <ASSOCIATED_PORT>
+          <NAME>FastEthernet0</NAME>
+          <DHCP_SERVER>
+            <ENABLED>1</ENABLED>
+            <POOLS> <POOL> ... </POOL> </POOLS>
+          </DHCP_SERVER>
+        </ASSOCIATED_PORT>
+      </ASSOCIATED_PORTS>
+    </DHCP_SERVERS>
+    <FTP_SERVER> <ENABLED>1</ENABLED> ... </FTP_SERVER>
+    ... and so on.
+
+    <SYS_NAME>...</SYS_NAME>
+    <SERIALNUMBER>...</SERIALNUMBER>
   </ENGINE>
 
   <WORKSPACE>
@@ -174,77 +213,68 @@ B.1 <DEVICE> — полная структура
       <X>200.0</X>
       <Y>200.0</Y>
       <DEVCLUSTERID>1-1</DEVCLUSTERID>
-      <CUSTOM_IMAGE_PHYSICAL/>
     </LOGICAL>
-    <PHYSICAL translate="true">Intercity,Home City,Corporate Office,Main Wiring Closet,Rack,<name></PHYSICAL>
+    <PHYSICAL translate="true">Intercity,Home City,...,Rack,<name></PHYSICAL>
   </WORKSPACE>
 </DEVICE>
 
 -------------------------------------------------------------------------------
-B.2 <LINK> — полная структура
+B.2 <LINK>  — full structure
 -------------------------------------------------------------------------------
 <LINK>
-  <TYPE>eCopper | eFiber | eSerial</TYPE>
+  <TYPE>eCopper | eFiber | eSerial | eCoaxial | ePhone</TYPE>
   <CABLE>
-    <LENGTH>1.5</LENGTH>
-    <FROM>0</FROM>                   <!-- индекс устройства в <DEVICES> -->
-    <PORT>FastEthernet0/0</PORT>     <!-- имя порта на стороне FROM -->
-    <TO>1</TO>                       <!-- индекс устройства -->
-    <PORT>FastEthernet0/1</PORT>     <!-- имя порта на стороне TO -->
+    <LENGTH>1.0</LENGTH>
+    <FROM>0</FROM>                    <!-- 0-based device index in <DEVICES> -->
+    <PORT>FastEthernet0/0</PORT>      <!-- port name on FROM side -->
+    <TO>1</TO>                        <!-- 0-based device index -->
+    <PORT>FastEthernet0/1</PORT>      <!-- port name on TO side -->
     <GEO_VIEW_COLOR>#000000</GEO_VIEW_COLOR>
     <TYPE>eStraightThrough | eCrossOver</TYPE>
   </CABLE>
 </LINK>
 
-ВАЖНО про LINK:
-  • FROM/TO — это НОМЕР устройства в порядке перечисления в <DEVICES>
-    (0-based). Программа AIcpt сама вычисляет эти номера по именам.
-  • Для Serial-линков <TYPE> = eSerial, вложенный <CABLE><TYPE> опускается
-    либо = eStraightThrough.
+The program looks up FROM/TO indices automatically by matching <link from=>/
+<link to=> to <device name=>, so you never write numeric indices.
 
 ===============================================================================
-C. ЧТО ОБЯЗАТЕЛЬНО / ОПЦИОНАЛЬНО
+C. REQUIRED VS OPTIONAL FIELDS
 ===============================================================================
 
-ОБЯЗАТЕЛЬНЫЕ поля в <DEVICE> (иначе PT не откроет файл):
-  ENGINE/TYPE[@model], ENGINE/NAME, ENGINE/POWER, ENGINE/MODULE (хотя бы
-  каркас), WORKSPACE/LOGICAL/X, WORKSPACE/LOGICAL/Y.
+REQUIRED in your simplified XML:
+  <device> needs name + type. Without model the program picks a default.
+  <link>   needs from + from_port + to + to_port.
 
-ОБЯЗАТЕЛЬНЫЕ поля в <LINK>:
-  LINK/TYPE, CABLE/FROM, CABLE/PORT (первый — от FROM), CABLE/TO,
-  CABLE/PORT (второй — от TO).
+OPTIONAL — the program fills in sensible values:
+  device   x/y, gateway, model
+  port     mac (auto-generated), bandwidth (template default), clockrate
+  link     type ("copper" by default)
 
-ОПЦИОНАЛЬНЫЕ поля (программа подставит значения по умолчанию либо опустит):
-  DESCRIPTION, IPV6_*, MEM_ADDR, DEV_ADDR, SERIALNUMBER, BIA, CHANNEL,
-  CLOCKRATEFLAG, все SECURITY-поля для свитча.
-
-ОСОБЕННОСТИ:
-  • После <NAME translate="true">...</NAME> в оригинале PT ставит '\n'
-    в конце содержимого — программа повторяет это поведение сама.
-  • MEM_ADDR / DEV_ADDR — это значения указателей в памяти PT на момент
-    сохранения. При первой загрузке в PT они обновятся. Можно не задавать.
-  • VERSION всегда "6.2.0.0052". Другие версии сохранения отличаются
-    набором полей и могут не открыться.
+The program ALWAYS provides MEM_ADDR / DEV_ADDR / SERIALNUMBER / BIA /
+IPV6_LINK_LOCAL / FILE_MANAGER / SECURITY / VTP / etc. — never write these
+yourself.
 
 ===============================================================================
-D. ЖИЗНЕННЫЙ ЦИКЛ ДАННЫХ
+D. DATA FLOW
 ===============================================================================
 
-  [описание сети .txt/.pdf/.docx]
-          │
-          ▼
-  prompt_builder.py  ─ склеивает текст + pre_prompt + spec + devices
-          │
-          ▼
-  prompt_for_ai.txt   →  пользователь → Claude/ChatGPT
-                                            │
-                         simplified.xml    ◄┘
-          │
-          ▼
-  xml_builder.py      ─ merge(white.xml, simplified.xml)
-          │
-          ▼
-  realTopolog.xml    (валидный Cisco PT XML)
-          │
-          ▼
-  repacket (Twofish/EAX)  →  network.pkt
+  [user description: txt / pdf / docx]
+            │
+            ├──> topology_recogniser_helper extracts diagram (PDF/DOCX)
+            │       and prepends an "AUTO-RECOGNISED TOPOLOGY" block
+            ▼
+   prompt_builder.py  ─ glues user text + pre_prompt + spec + devices + topo
+            │
+            ▼
+   prompt_for_ai.txt  →  user copies into Claude / GPT
+                              │
+            simplified.xml  ◄─┘
+            │
+            ▼
+   xml_builder.py     ─ merge(white.xml, simplified.xml) using real templates
+            │
+            ▼
+   realTopolog.xml    (valid Cisco PT 6.2 XML)
+            │
+            ▼
+   repacket (Twofish/EAX)  →  realTopolog.pkt

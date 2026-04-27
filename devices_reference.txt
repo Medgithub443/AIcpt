@@ -1,18 +1,18 @@
-СПРАВОЧНИК УСТРОЙСТВ CISCO PACKET TRACER 6.2
-(полный каталог из 43 моделей)
+CISCO PACKET TRACER 6.2 — DEVICE REFERENCE
+(complete catalogue, 43 models)
 
-В колонке `type` — значение, которое нужно писать в <device type="...">.
-Колонка `model` — то, что попадает в <device model="..."> и в <TYPE model="...">
-полного PT-XML. Колонка ИНТЕРФЕЙСЫ — имена портов, которые программа понимает
-в <interface name="..."> (соответствуют последовательности <PORT> в реальном
-шаблоне).
+The `type` column is the value you write in <device type="...">.
+The `model` column is what goes into <device model="..."> and into the
+PT-XML <TYPE model="..."> element. INTERFACES lists the IOS-style port
+names that the program understands in <interface name="..."> (matching
+the <PORT> sequence of the underlying real PT template).
 
 ===============================================================================
-МАРШРУТИЗАТОРЫ  (type="router")
+ROUTERS  (type="router")
 ===============================================================================
 
   model="1841"      Router  — FastEthernet0/0, FastEthernet0/1
-                              (классика для лаб OSPF/RIP/статика)
+                              (classic for OSPF / RIP / static routing labs)
   model="1941"      Router  — GigabitEthernet0/0, GigabitEthernet0/1
   model="2620XM"    Router  — FastEthernet0/0
   model="2621XM"    Router  — FastEthernet0/0, FastEthernet0/1
@@ -22,38 +22,38 @@
   model="819HGW"    Router  — FastEthernet0..3, FastEthernet1, GigabitEthernet0,
                               Cellular0, Serial0, Vlan1
   model="Router-PT" Router  — FastEthernet0/0..0/1, Serial2/0, Serial3/0,
-                              FastEthernet4/0..5/0  (универсальный)
-  model="Router-PT-Empty"   — пустой шасси без модулей
+                              FastEthernet4/0..5/0   (universal, includes WICs)
+  model="Router-PT-Empty"   — empty chassis, no modules
 
-★ По умолчанию для type="router" → "1841". Если задача — современный Gigabit, бери
-2911. Если нужно много портов и Serial — Router-PT.
+★ Default for type="router" is 1841. For modern Gigabit pick 2911. For
+  Serial-heavy WAN setups pick Router-PT.
 
 ===============================================================================
-КОММУТАТОРЫ  (type="switch")
+SWITCHES  (type="switch")
 ===============================================================================
 
   model="2950-24"   Switch  — FastEthernet0/1..0/24
   model="2950T-24"  Switch  — FastEthernet0/1..0/24, GigabitEthernet0/1..0/2
-  model="2960-24TT" Switch  — то же  ★ по умолчанию
+  model="2960-24TT" Switch  — same  ★ default
   model="3560-24PS" MultiLayerSwitch — FastEthernet0/1..0/24, Gig0/1..0/2 (L3)
-  model="Switch-PT"        Switch  — FastEthernet0/0..0/5  (универсальный)
-  model="Switch-PT-Empty"          — пустой шасси
+  model="Switch-PT"        Switch  — FastEthernet0/0..0/5  (universal)
+  model="Switch-PT-Empty"          — empty chassis
 
 ===============================================================================
-ЗАЩИТНЫЙ ЭКРАН  (type="firewall")
+FIREWALL  (type="firewall")
 ===============================================================================
 
   model="5505"     ASA  — Ethernet0/0..0/7
 
 ===============================================================================
-КОНЕЧНЫЕ УСТРОЙСТВА
+END-HOSTS
 ===============================================================================
 
   type="pc"          model="PC-PT"               — FastEthernet0    ★
   type="laptop"      model="Laptop-PT"           — FastEthernet0
   type="server"      model="Server-PT"           — FastEthernet0    ★
-                       (поддерживает services: dhcp, dns, http, ftp, tftp,
-                        ntp, syslog, email)
+                       (supports <services>: dhcp, dns, http, https,
+                        ftp, tftp, ntp, syslog, email)
   type="printer"     model="Printer-PT"          — FastEthernet0
   type="ip_phone"    model="7960"                — FastEthernet0/0,
                                                    PCFastEthernet0/1
@@ -65,16 +65,16 @@
   model="Analog-Phone-PT"       — Modem0
 
 ===============================================================================
-БЕСПРОВОДНЫЕ ТОЧКИ ДОСТУПА  (type="access_point")
+WIRELESS ACCESS POINTS  (type="access_point")
 ===============================================================================
 
   model="AccessPoint-PT"    — Wireless0, Ethernet0/1/0   ★
-  model="AccessPoint-PT-A"  — то же (стандарт A)
-  model="AccessPoint-PT-N"  — то же (стандарт N)
+  model="AccessPoint-PT-A"  — same (802.11a)
+  model="AccessPoint-PT-N"  — same (802.11n)
   model="Linksys-WRT300N"   WirelessRouter — Internet, Ethernet1..4, Wireless
 
 ===============================================================================
-ХАБЫ / МОСТЫ / ПОВТОРИТЕЛИ / СНИФФЕРЫ
+HUBS / BRIDGES / REPEATERS / SNIFFERS
 ===============================================================================
 
   type="hub"        model="Hub-PT"      — Port 0..Port 5  ★
@@ -83,11 +83,11 @@
   type="sniffer"    model="Sniffer"     — Ethernet0, Ethernet1
 
 ===============================================================================
-МОДЕМЫ / ОБЛАКА / WAN-устройства
+MODEMS / CLOUDS / WAN
 ===============================================================================
 
   type="cloud"  model="Cloud-PT"        — Modem0..1, Ethernet0..3, Coaxial0, Serial0
-                model="Cloud-PT-Empty"  — пустое
+                model="Cloud-PT-Empty"  — empty
   type="modem"  model="DSL-Modem-PT"    — Modem0, Ethernet1   ★
                 model="Cable-Modem-PT"  — Coaxial0, Ethernet1
   type="voip"   model="Home-VoIP-PT"    — Modem0, Ethernet1
@@ -96,23 +96,23 @@
   model="Central-Office-Server"    — Modem0, Coaxial0..2, FastEthernet0..3
 
 ===============================================================================
-ТИПЫ КАБЕЛЕЙ (для <link type="...">)
+CABLE TYPES  (for <link type="...">)
 ===============================================================================
 
-  copper     — прямой медный (eStraightThrough). По умолчанию.
-               Использовать: switch↔router, switch↔PC, AP↔switch.
-  crossover  — медный кросс-овер (eCrossOver). Между одинаковыми устройствами:
-               router↔router, PC↔PC, иногда switch↔switch.
-  serial     — последовательный (eSerial / eStraightThrough). Только Serial-порты.
-  fiber      — оптика (eFiber / eStraightThrough). Для Gigabit-портов с SFP.
-  coaxial    — коаксиал (eCoaxial). Для Cable-Modem ↔ Cloud, TV.
-  phone      — телефонный (ePhone). Для Analog-Phone ↔ Home-VoIP.
+  copper     — straight-through copper (eStraightThrough). Default.
+               Use for: switch↔router, switch↔PC, AP↔switch.
+  crossover  — copper cross-over (eCrossOver). Use between same-kind active
+               devices: router↔router, PC↔PC, sometimes switch↔switch.
+  serial     — serial (eSerial / eStraightThrough). Serial ports only.
+  fiber      — fibre (eFiber / eStraightThrough). Gigabit ports with SFP.
+  coaxial    — coaxial (eCoaxial). Cable-Modem ↔ Cloud, TV.
+  phone      — telephone (ePhone). Analog-Phone ↔ Home-VoIP.
 
 ===============================================================================
-ТИПОВЫЕ RUNNINGCONFIG-БЛОКИ
+TYPICAL RUNNINGCONFIG SNIPPETS
 ===============================================================================
 
-Hostname + интерфейс + OSPF:
+Hostname + interface + OSPF:
   hostname R1
   interface FastEthernet0/0
    ip address 10.0.0.1 255.255.255.0
@@ -120,19 +120,32 @@ Hostname + интерфейс + OSPF:
   router ospf 1
    network 10.0.0.0 0.0.0.255 area 0
 
-Статический маршрут:
+Static route:
   ip route 172.16.1.0 255.255.255.0 192.168.10.2
 
-VLAN + access-порт:
+VLAN + access port:
   vlan 10
    name staff
   interface FastEthernet0/1
    switchport mode access
    switchport access vlan 10
 
-DHCP-pool на роутере:
+Trunk:
+  interface GigabitEthernet0/1
+   switchport mode trunk
+   switchport trunk allowed vlan 10,20,99
+
+DHCP pool on a router:
   ip dhcp excluded-address 10.0.0.1 10.0.0.9
   ip dhcp pool LAN
    network 10.0.0.0 255.255.255.0
    default-router 10.0.0.1
    dns-server 8.8.8.8
+
+NAT overload:
+  ip nat inside source list 1 interface FastEthernet0/1 overload
+  access-list 1 permit 10.0.0.0 0.0.0.255
+  interface FastEthernet0/0
+   ip nat inside
+  interface FastEthernet0/1
+   ip nat outside

@@ -28,8 +28,11 @@ WHITE_XML = HERE / "white.xml"
 
 
 def cli_prompt(args: argparse.Namespace) -> int:
+    auto_topo = not args.no_topology
     session, prompt_path = prompt_builder.run(
-        args.user_file, ASSETS_DIR, HERE / "output"
+        args.user_file, ASSETS_DIR, HERE / "output",
+        auto_topology=auto_topo,
+        topology_log=lambda m: print(m),
     )
     print(f"[+] Сессия:  {session}")
     print(f"[+] Промпт:  {prompt_path}")
@@ -68,6 +71,8 @@ def build_cli() -> argparse.ArgumentParser:
 
     p1 = sub.add_parser("prompt", help="Собрать prompt_for_ai.txt из txt/pdf/docx")
     p1.add_argument("user_file")
+    p1.add_argument("--no-topology", action="store_true",
+                    help="Не запускать topology_recogniser (по умолчанию запускается для PDF/DOCX)")
 
     p2 = sub.add_parser("build", help="Собрать полный XML и .pkt из simplified.xml")
     p2.add_argument("simplified_xml")
@@ -93,7 +98,7 @@ def run_gui() -> int:
     class AIcptWindow(QtWidgets.QMainWindow):
         def __init__(self) -> None:
             super().__init__()
-            self.setWindowTitle("AIcpt — описание сети → Cisco Packet Tracer")
+            self.setWindowTitle("AIcpt 0.4.1-alfa — описание сети → Cisco Packet Tracer")
             self.resize(1000, 720)
             self.session_dir: Path | None = None
             self.prompt_path: Path | None = None
@@ -125,11 +130,26 @@ def run_gui() -> int:
             self.user_file_edit.setPlaceholderText(
                 "Файл с описанием сети (txt / pdf / docx)"
             )
+            self.user_file_edit.textChanged.connect(self._update_topology_checkbox)
             btn_browse = QtWidgets.QPushButton("Обзор…")
             btn_browse.clicked.connect(self._pick_user_file)
             row.addWidget(self.user_file_edit, 1)
             row.addWidget(btn_browse)
             lay.addLayout(row)
+
+            self.topology_cb = QtWidgets.QCheckBox(
+                "Добавить авто-распознанную топологию по скриншоту схемы [BETA]"
+            )
+            self.topology_cb.setChecked(False)   # по умолчанию снята
+            self.topology_cb.setToolTip(
+                "Если поставить галочку и нажать «Собрать prompt_for_ai.txt», "
+                "откроется диалог загрузки скриншота схемы (.png / .jpg / .jpeg).\n"
+                "topology_recogniser попробует распознать устройства и связи;\n"
+                "результат добавится в prompt_for_ai.txt.\n\n"
+                "BETA: распознавание не идеально, всегда проверяй результат.\n"
+                "PDF и DOCX в этой версии не поддерживаются."
+            )
+            lay.addWidget(self.topology_cb)
 
             btn_build_prompt = QtWidgets.QPushButton(
                 "Собрать prompt_for_ai.txt"
@@ -332,19 +352,230 @@ def run_gui() -> int:
                 "Документы (*.txt *.md *.pdf *.docx);;Все файлы (*)",
             )
             if path:
-                self.user_file_edit.setText(path)
+                # Path.resolve() нормализует путь (в т.ч. с пробелами)
+                self.user_file_edit.setText(str(Path(path).resolve()))
+
+        def _update_topology_checkbox(self) -> None:
+            # Галочка всегда активна (не зависит от типа входного файла)
+            self.topology_cb.setEnabled(True)
+
+        # ---- topology image dialog ----
+        def _ask_topology_image(self) -> Path | None:
+            """Открывает диалоговое окно для загрузки скриншота топологии.
+
+            Поддерживает:
+              • drag-and-drop файла на область предпросмотра
+              • Ctrl+V (вставка из буфера обмена)
+              • кнопку «Выбрать файл…» (проводник, PNG / JPEG)
+
+            Возвращает Path к временному файлу изображения или None.
+            """
+            from PyQt5 import QtCore, QtGui, QtWidgets
+            import tempfile, io
+
+            class _DropArea(QtWidgets.QLabel):
+                image_ready = QtCore.pyqtSignal(Path)
+
+                def __init__(self) -> None:
+                    super().__init__()
+                    self.setAcceptDrops(True)
+                    self.setAlignment(QtCore.Qt.AlignCenter)
+                    self.setMinimumHeight(200)
+                    self.setSizePolicy(
+                        QtWidgets.QSizePolicy.Expanding,
+                        QtWidgets.QSizePolicy.Expanding,
+                    )
+                    self._reset_text()
+                    self.setStyleSheet(
+                        "border: 2px dashed #888; border-radius: 8px; "
+                        "background: #f9f9f9; color: #555;"
+                    )
+
+                def _reset_text(self) -> None:
+                    self.setText(
+                        "Перетащи сюда PNG или JPEG\n"
+                        "— или нажми Ctrl+V для вставки из буфера —"
+                    )
+
+                def dragEnterEvent(self, e: QtGui.QDragEnterEvent) -> None:
+                    if e.mimeData().hasUrls():
+                        exts = {".png", ".jpg", ".jpeg"}
+                        if any(
+                            Path(u.toLocalFile()).suffix.lower() in exts
+                            for u in e.mimeData().urls()
+                        ):
+                            e.acceptProposedAction()
+                            return
+                    e.ignore()
+
+                def dropEvent(self, e: QtGui.QDropEvent) -> None:
+                    for url in e.mimeData().urls():
+                        p = Path(url.toLocalFile())
+                        if p.suffix.lower() in {".png", ".jpg", ".jpeg"}:
+                            self._show_preview(p)
+                            self.image_ready.emit(p)
+                            return
+
+                def _show_preview(self, path: Path) -> None:
+                    pix = QtGui.QPixmap(str(path))
+                    if not pix.isNull():
+                        self.setPixmap(
+                            pix.scaled(
+                                self.width() - 20, self.height() - 20,
+                                QtCore.Qt.KeepAspectRatio,
+                                QtCore.Qt.SmoothTransformation,
+                            )
+                        )
+                    else:
+                        self.setText(f"✔ {path.name}")
+
+            dlg = QtWidgets.QDialog(self)
+            dlg.setWindowTitle("Загрузка скриншота топологии [BETA]")
+            dlg.resize(560, 420)
+            dlg.setWindowFlags(
+                dlg.windowFlags() & ~QtCore.Qt.WindowContextHelpButtonHint
+            )
+            v = QtWidgets.QVBoxLayout(dlg)
+
+            hint = QtWidgets.QLabel(
+                "<b>Прикрепи скриншот схемы Cisco Packet Tracer</b><br>"
+                "Поддерживаются форматы: <b>PNG, JPEG</b>"
+            )
+            hint.setWordWrap(True)
+            v.addWidget(hint)
+
+            drop_area = _DropArea()
+            v.addWidget(drop_area, 1)
+
+            selected_path: list[Path] = []   # изменяемый контейнер
+
+            def _on_image(p: Path) -> None:
+                selected_path.clear()
+                selected_path.append(p)
+
+            drop_area.image_ready.connect(_on_image)
+
+            def _pick_file() -> None:
+                path, _ = QtWidgets.QFileDialog.getOpenFileName(
+                    dlg,
+                    "Выбери скриншот схемы",
+                    "",
+                    "Изображения (*.png *.jpg *.jpeg);;Все файлы (*)",
+                )
+                if path:
+                    p = Path(path)
+                    drop_area._show_preview(p)
+                    _on_image(p)
+
+            def _paste_clipboard() -> None:
+                cb = QtWidgets.QApplication.clipboard()
+                img = cb.image()
+                if img.isNull():
+                    QtWidgets.QMessageBox.warning(
+                        dlg, "AIcpt",
+                        "Буфер обмена не содержит изображения.\n"
+                        "Скопируй скриншот, затем нажми Ctrl+V снова."
+                    )
+                    return
+                tmp = tempfile.NamedTemporaryFile(
+                    suffix=".png", prefix="aicpt_topo_", delete=False
+                )
+                tmp.close()
+                p = Path(tmp.name)
+                img.save(str(p), "PNG")
+                drop_area._show_preview(p)
+                _on_image(p)
+
+            # Ctrl+V shortcut
+            sc = QtWidgets.QShortcut(QtGui.QKeySequence("Ctrl+V"), dlg)
+            sc.activated.connect(_paste_clipboard)
+
+            row = QtWidgets.QHBoxLayout()
+            btn_file = QtWidgets.QPushButton("Выбрать файл…")
+            btn_file.clicked.connect(_pick_file)
+            btn_paste = QtWidgets.QPushButton("Вставить из буфера (Ctrl+V)")
+            btn_paste.clicked.connect(_paste_clipboard)
+            row.addWidget(btn_file)
+            row.addWidget(btn_paste)
+            row.addStretch(1)
+            v.addLayout(row)
+
+            bbox = QtWidgets.QDialogButtonBox(
+                QtWidgets.QDialogButtonBox.Ok | QtWidgets.QDialogButtonBox.Cancel
+            )
+            bbox.accepted.connect(dlg.accept)
+            bbox.rejected.connect(dlg.reject)
+            v.addWidget(bbox)
+
+            if dlg.exec_() != QtWidgets.QDialog.Accepted:
+                return None
+            return selected_path[0] if selected_path else None
 
         def _do_build_prompt(self) -> None:
-            path = self.user_file_edit.text().strip()
-            if not path:
+            path = Path(self.user_file_edit.text().strip()).resolve()
+            if not self.user_file_edit.text().strip():
                 QtWidgets.QMessageBox.warning(
                     self, "AIcpt", "Сначала выбери файл с описанием сети."
                 )
                 return
+
+            # Если галочка стоит — запросить скриншот топологии
+            topo_image_path: Path | None = None
+            if self.topology_cb.isChecked():
+                topo_image_path = self._ask_topology_image()
+                # Пользователь закрыл диалог — не прерываем основной поток
+                # (продолжаем без топологии, но предупреждаем)
+                if topo_image_path is None:
+                    reply = QtWidgets.QMessageBox.question(
+                        self, "AIcpt",
+                        "Скриншот не выбран. Продолжить без авто-топологии?",
+                        QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+                    )
+                    if reply != QtWidgets.QMessageBox.Yes:
+                        return
+
+            log_lines: list[str] = []
+
+            def _log(msg: str) -> None:
+                log_lines.append(msg)
+                self.status.showMessage(msg, 6000)
+                QtWidgets.QApplication.processEvents()
+
+            self.status.showMessage("Собираю промпт…")
+            QtWidgets.QApplication.processEvents()
+
+            # --- распознавание топологии (если задан скриншот) ---
+            topology_desc: str | None = None
+            if topo_image_path is not None:
+                try:
+                    import topology_recogniser_helper as trh
+                    topology_desc = trh.recognise_from_image(topo_image_path)
+                    if topology_desc:
+                        n_devs = topology_desc.count("name=")
+                        _log(
+                            f"[+] topology_recogniser: распознано "
+                            f"~{n_devs} устройств, добавлено в промпт."
+                        )
+                    else:
+                        _log("[!] topology_recogniser: схему сети не нашёл.")
+                except Exception as e:
+                    _log(f"[-] topology_recogniser: {e}")
+
             try:
-                session, prompt_path = prompt_builder.run(
-                    path, ASSETS_DIR, HERE / "output"
+                # Используем Path.resolve() чтобы пути с пробелами передавались корректно
+                user_text = prompt_builder.read_user_input(path)
+                from prompt_builder import build_prompt, make_output_dir
+                session = make_output_dir(HERE / "output")
+                prompt_text = build_prompt(
+                    user_text, ASSETS_DIR, topology_description=topology_desc
                 )
+                prompt_path = session / "prompt_for_ai.txt"
+                prompt_path.write_text(prompt_text, encoding="utf-8")
+                (session / "user_input.txt").write_text(user_text, encoding="utf-8")
+                if topology_desc:
+                    (session / "topology_recognised.txt").write_text(
+                        topology_desc, encoding="utf-8"
+                    )
             except Exception as e:
                 self._show_error("Не удалось собрать промпт", e)
                 return
@@ -353,7 +584,8 @@ def run_gui() -> int:
             self.prompt_path = prompt_path
             text = prompt_path.read_text(encoding="utf-8")
             self.prompt_view.setPlainText(text)
-            self.status.showMessage(f"Промпт сохранён: {prompt_path}")
+            tail = log_lines[-1] if log_lines else f"Промпт сохранён: {prompt_path}"
+            self.status.showMessage(tail)
 
         def _copy_prompt(self) -> None:
             text = self.prompt_view.toPlainText()
@@ -368,13 +600,14 @@ def run_gui() -> int:
             import subprocess
             import platform
 
-            p = str(self.session_dir)
+            # Используем Path.resolve() + передаём как один аргумент — пробелы в пути не проблема
+            p = Path(self.session_dir).resolve()
             if platform.system() == "Darwin":
-                subprocess.Popen(["open", p])
+                subprocess.Popen(["open", str(p)])
             elif platform.system() == "Windows":
-                subprocess.Popen(["explorer", p])
+                subprocess.Popen(["explorer", str(p)])
             else:
-                subprocess.Popen(["xdg-open", p])
+                subprocess.Popen(["xdg-open", str(p)])
 
         def _load_simplified(self) -> None:
             path, _ = QtWidgets.QFileDialog.getOpenFileName(

@@ -26,6 +26,8 @@ Cisco Packet Tracer 6.2 XML** и затем шифрует в формат **.pk
 
 ```bash
 pip install PyQt5 pypdf python-docx
+# Опционально — для авто-распознавания топологии (вкладка 1, BETA):
+pip install opencv-python numpy pillow pymupdf
 ```
 
 Всё остальное (zlib, xml.etree, struct) — стандартная библиотека.
@@ -44,6 +46,10 @@ python main.py
 1. **«Промпт для нейросети»** — выбери txt/pdf/docx с описанием сети,
    нажми «Собрать prompt_for_ai.txt», скопируй получившийся текст и
    вставь в Claude или ChatGPT.
+   - Чекбокс **«Добавить авто-распознанную топологию [BETA]»** (по
+     умолчанию вкл, активен только для PDF/DOCX) запускает
+     `topology_recogniser` — он находит в документе скриншот схемы,
+     детектирует устройства и связи, добавляет результат в промпт.
 
 2. **«Сборка .pkt»** — вставь упрощённый XML от нейросети (или загрузи
    из файла), нажми «Собрать полный XML и .pkt». Готовый `realTopolog.pkt`
@@ -73,20 +79,22 @@ python main.py build simplified.xml
 
 ```
 AIcpt/
-├── main.py                  # CLI + PyQt5 GUI (3 вкладки)
-├── prompt_builder.py        # текстовое описание → prompt_for_ai.txt
-├── table_builder.py         # IP-таблица → simplified XML  (NEW)
-├── xml_builder.py           # simplified → полный PT XML → .pkt
+├── main.py                          # CLI + PyQt5 GUI (3 вкладки)
+├── prompt_builder.py                # описание → prompt_for_ai.txt
+├── table_builder.py                 # IP-таблица → simplified XML
+├── xml_builder.py                   # simplified → полный PT XML → .pkt
+├── topology_recogniser_helper.py    # PDF/DOCX → recogniser  (NEW v0.4a)
 ├── repacket.py / unpacket.py
-├── white.xml                # пустой шаблон Cisco PT 6.2
-├── templates/               # 43 реальных DEVICE-шаблона  (NEW)
-│   ├── 1841.xml, 2960-24TT.xml, Server-PT.xml, Hub-PT.xml, ...
-│   └── (всё, что есть в Packet Tracer 6.2)
-├── Decipher/                # крипто-модули (Twofish + EAX + CMAC)
-├── pre_prompt.txt           # инструкция для нейросети
-├── specification_guide.txt  # спецификация упрощённого XML
-├── devices_reference.txt    # каталог моделей и интерфейсов
-└── output/                  # рабочие сессии
+├── white.xml                        # пустой шаблон PT 6.2
+├── templates/                       # 43 DEVICE-шаблона
+├── topology_recogniser/             # утилита распознавания  (NEW v0.4a)
+│   ├── topology_recogniser.py
+│   └── Logical/                     # ~50 PNG-иконок устройств
+├── Decipher/                        # Twofish + EAX + CMAC
+├── pre_prompt.txt                   # ENG: инструкция для AI  (v0.4a)
+├── specification_guide.txt          # ENG: спецификация       (v0.4a)
+├── devices_reference.txt            # ENG: каталог            (v0.4a)
+└── output/                          # рабочие сессии
     └── 2026-04-25_18-14-59/
         ├── user_input.txt, prompt_for_ai.txt
         ├── simplified.xml
